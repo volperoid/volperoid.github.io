@@ -56,9 +56,12 @@ body {
     letter-spacing: 2px;
     padding: 0 5px 0 5px;
 }
-#calc-display:focus, ::placeholder {
+#calc-display:focus {
     border: 5px solid rgba(245, 245, 245, 0.3);
     caret-color: transparent;
+
+}
+.calc-display::placeholder {
     color: white;
 }
 .calc-btn {
