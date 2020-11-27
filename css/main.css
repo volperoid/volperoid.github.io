@@ -61,7 +61,7 @@ body {
 .calc-display::placeholder {
     color: white;
 }
-.calc-btn {
+.calc-btn, .calc-btn:focus {
     display: flex;
     align-items: center;
     justify-content: center;
