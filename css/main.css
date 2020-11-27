@@ -59,7 +59,7 @@ body {
 #calc-display:focus {
     border: 5px solid rgba(245, 245, 245, 0.3);
     caret-color: transparent;
-
+    outline: none;
 }
 .calc-display::placeholder {
     color: white;
@@ -72,6 +72,9 @@ body {
 }
 .calc-btn:hover {
     box-shadow: inset 0 0 5px 5px rgba(245, 245, 245, 0.3);
+}
+.calc-btn:focus {
+    outline: none;
 }
 #btn0 {
     grid-column: 1 / 2;
