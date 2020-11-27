@@ -7,9 +7,9 @@ function clearValue(){
 };
 function calc(){
     let operation = document.getElementById("calc-display").value;
-    if (/^[\d()\/*.+-]+$/.test(operation)) {
+    if (/^[\d()\/*.+-]+$/.test(operation)) || (operation.length < 16)) {
         document.getElementById("calc-display").value = eval(operation)
     } else {
-        alert("Only numbers and mathematical operators allowed.")
+        alert("Maximum of only 15 numbers and mathematical operators allowed.")
     };
 };
