@@ -162,3 +162,8 @@ footer {
 #github-icon {
     padding-right: 5px;
 }
+#blob {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+}
