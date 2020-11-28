@@ -56,12 +56,12 @@ main {
     letter-spacing: 2px;
     padding: 0 5px;
 }
+#calc-display::placeholder {
+    color: rgba(250, 235, 215, 0.7);
+}
 #calc-display:focus {
     border: 5px solid rgba(245, 245, 245, 0.3);
     caret-color: transparent;
-}
-.calc-display::placeholder {
-    color: red;
 }
 .calc-btn {
     display: flex;
