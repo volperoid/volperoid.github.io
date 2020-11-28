@@ -1,4 +1,4 @@
-<body align="center" style="background-color:gray;">
+<body align="center" style="background-color:red;">
     <img src="media/blob.png" width="50%">
 
 ![Reddit](https://img.shields.io/badge/Reddit-gray?style=for-the-badge&logo=reddit&labelColor=white) ![Discord](https://img.shields.io/badge/Discord-gray?style=for-the-badge&logo=discord&labelColor=white) ![Discord](https://img.shields.io/badge/Instagram-gray?style=for-the-badge&logo=instagram&labelColor=gray)
