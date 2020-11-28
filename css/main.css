@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
 * {
     border: 0;
     padding: 0;
     margin: 0;
-    outline: none;
+    outline: none !important;
     box-sizing: border-box;
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 24pt;
     text-align: center;
     color: white;
-}
-h1, h2, h3, h4, h5, h6 {
-    margin: 0;
+    text-decoration: none !important;
 }
 html, body {
     height: 100%;
@@ -20,7 +19,7 @@ html, body {
 body {
     background: linear-gradient(to top right, rgb(155, 50, 182), rgba(225, 215, 50, 1))
 }
-#frame {
+main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -52,21 +51,20 @@ body {
     width: 75%;
     text-align: right;
     letter-spacing: 2px;
-    padding: 0 5px 0 5px;
+    padding: 0 5px;
 }
 #calc-display:focus {
     border: 5px solid rgba(245, 245, 245, 0.3);
     caret-color: transparent;
 }
 .calc-display::placeholder {
-    color: white;
+    color: red;
 }
-.calc-btn, .calc-btn:focus {
+.calc-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(245, 245, 245, 0.2);
-    outline: none;
 }
 .calc-btn:hover {
     box-shadow: inset 0 0 5px 5px rgba(245, 245, 245, 0.3);
@@ -135,11 +133,32 @@ body {
     grid-column: 3 / 4;
     grid-row: 5 / 6;
 }
+footer, #credits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 footer {
-    font-size: 8pt;
-    text-align: center;
-    color: antiquewhite;
     width: 100%;
     position: fixed;
     bottom: 1%;
+}
+#credits {
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    padding: 5px 10px;
+    border: 1px solid antiquewhite;
+    border-radius: 50px;
+}
+#credits a, a:hover, a:visited, a:active {
+    color: antiquewhite;
+    font-size: 12pt;
+    vertical-align: middle;
+}
+#credits:hover {
+    opacity: 0.5;
+}
+#github-icon {
+    padding-right: 5px;
 }
