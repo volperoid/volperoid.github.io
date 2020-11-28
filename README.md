@@ -1,22 +1,9 @@
-<head>
-    <style>
-        * {
-            background-color: transparent !important;
-            vertical-align: middle;
-            text-align: center;
-            color: lightskyblue;
-        }
-        h1 {
-            background-color: rgba(50, 1, 50, 1);
-        }
-    </style>
-</head>
 <body align="center">
     <img src="media/blob.png" width="50%">
 
 ![Reddit](https://img.shields.io/badge/Reddit-gray?style=for-the-badge&logo=reddit&labelColor=white) ![Discord](https://img.shields.io/badge/Discord-gray?style=for-the-badge&logo=discord&labelColor=white) ![Discord](https://img.shields.io/badge/Instagram-gray?style=for-the-badge&logo=instagram&labelColor=gray)
 
-<h1>Projects</h1>
+# Projects
 
 |Project|Description|Status|Tags|
 |:-----:|:---------:|:----:|:--:|
