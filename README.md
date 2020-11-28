@@ -1,3 +1,4 @@
+<head><style>body{vertical-align:middle;}</style></head>
 <body align="center">
     <img src="media/blob.png" width="50%">
 
