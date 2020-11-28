@@ -4,7 +4,7 @@
     border: 0;
     padding: 0;
     margin: 0;
-    outline: none !important;
+    outline: none;
     box-sizing: border-box;
     font-family: Roboto, Arial, Helvetica, sans-serif;
     font-size: 24pt;
@@ -29,8 +29,11 @@ main {
 .grid-box {
     display: grid;
     gap: 10px;
+    padding: 10px;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: repeat(5, 100px);
+    border: 1px solid rgba(250, 235, 215, 0.7);
+    border-radius: 25px;
 }
 #wrapper, #clear-btn, #calc-display, .calc-btn {
     border-radius: 25px;
@@ -148,16 +151,17 @@ footer {
     width: -webkit-fit-content;
     width: fit-content;
     padding: 5px 10px;
-    border: 1px solid antiquewhite;
+    border: 1px solid rgba(250, 235, 215, 0.7);
     border-radius: 50px;
+    opacity: 0.7;
 }
 #credits a, a:hover, a:visited, a:active {
-    color: antiquewhite;
+    color: rgba(250, 235, 215, 0.7);
     font-size: 12pt;
     vertical-align: middle;
 }
 #credits:hover {
-    opacity: 0.5;
+    opacity: 1;
 }
 #github-icon {
     padding-right: 5px;
@@ -166,4 +170,17 @@ footer {
     position: fixed;
     bottom: 0;
     right: 10px;
+    z-index: 1;
+    transition: bottom 1s ease-in-out;
+    transform: translate() 1s ease-in-out;
+}
+#blob:hover {
+    bottom: -100px;
+}
+#poop {
+    position: fixed;
+    bottom: 0;
+    right: 30px;
+    z-index: 0;
+
 }
