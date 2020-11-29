@@ -1,6 +1,5 @@
-<h1 align="center"><img src="media/blob.png" width="50%"></h1>
+<h1 align="center"><img src="media/blob.png" width="50%">About</img></h1>
 
-# About
 <hr>
 <div align="center">
   
