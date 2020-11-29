@@ -1,0 +1,238 @@
+/***********/
+/* Imports */
+/***********/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/*************/
+/* CSS Reset */
+/*************/
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+/**********/
+/* Global */
+/**********/
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+h1 {
+    font-size: 51px;
+    color: #f0f8fb;
+    font-weight: 300;
+}
+h2 {
+    font-size: 35px;
+    font-weight: 500;
+    color: #1a2940;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    color: #ffc501;
+}
+h6 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #a8b9c0;
+}
+.bg-19283f {
+    background-color: #19283f;
+}
+.bg-eff7fa {
+  background-color: #eff7fa;
+}
+.bg-ffc400 {
+    background-color: #ffc400;
+}
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.title_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img_div {
+    width: fit-content;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+#hr-separator img {
+    text-align: center;
+    padding: 0;
+}
+
+/**********/
+/* Header */
+/**********/
+
+#logo {
+    width: 90px;
+}
+.nav-link {
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    color:  #a8b9c0 !important;
+}
+.active .nav-link {
+    color: #00c7c0 !important;
+}
+.nav-link:hover {
+    border-radius: 25px;
+    background-color: #f0f8fb;
+    color: #19283f !important;
+}
+.divider {
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 0;
+}
+#search-bar {
+    background-color:#19283f;
+    border-radius: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#search-input {
+    background: #19283f;
+    outline: none;
+    width: 0;
+    border-radius: 25px;
+    padding: 8px 12px;
+    text-align: left;
+    visibility: hidden;
+    transition: width 0.3s linear;
+}
+#search-btn {
+    border-radius: 100%;
+    padding: 6px 0px;
+}
+#search-bar:hover > #search-input {
+    color: #f0f8fb;
+    width: 100px;
+    padding: 8px 12px;
+    transition: width 0.3s linear;
+    visibility: visible;
+}
+#search-input:focus {
+    width: 250px !important;
+    padding: 8px 12px;
+    color: #19283f !important;
+    background-color: #f0f8fb;
+    border: 1px solid #00c6bf;
+    caret-color: transparent;
+    margin-right: 20px;
+    visibility: visible;
+}
+#search-input::placeholder {
+    color: #a8b9c0;
+}
+#login-btn, #content-btn {
+    color: #ffc501;
+    padding: 8px 30px;
+    border-radius: 20px;
+    background-color: #ff3150;
+    font-size: 15px;
+}
+#login-btn {
+    margin-left: 10px;
+}
+header #content-btn {
+    margin-top: 35px;
+}
+#login-btn:hover, #title-btn:hover  {
+    opacity: 0.5;
+}
+#title-block {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+/************/
+/* Services */
+/************/
+
+.image_stack {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+.service {
+    width: 33.33%;
+    padding: 60px 60px 60px 60px;
+}
+.frame-index-1 {
+    z-index: 1;
+}
+.frame-index-2 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+}
+
+/*************/
+/* Portfolio */
+/*************/
+
+#carousel-nav {
+    color: #a8b9c0;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 60px 0;
+}
+#carousel-nav .nav-link:hover {
+    background-color: #ff3150;
+    color: #ffc501 !important;
+    padding: 8px 30px;
+}
+#carousel-nav .active .nav-link {
+    color: #ffc501;
+}
+#works {
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+#works img {
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+#works img:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+}
+main #content-btn {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
