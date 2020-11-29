@@ -1,7 +1,7 @@
 <h1 align="center">
   <img src="media/blob.png" width="50%"><br>
-  About<br>
-</h1>
+  About
+</h1><br>
 
 <div align="center">
 <hr>
