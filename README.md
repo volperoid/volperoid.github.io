@@ -1,11 +1,11 @@
 <h1 align="center"><img src="media/blob.png" width="50%">
-    
+
     ABOUT
 </h1>
 <div align="center">
 <hr>
-    
-![LinkedIn](https://img.shields.io/badge/LinkedIn-white?style=for-the-badge&logo=linkedin&logoColor=0077B5) ![Discord](https://img.shields.io/badge/Discord-white?style=for-the-badge&logo=discord&logoColor=7289DA) ![Instagram](https://img.shields.io/badge/Instagram-white?style=for-the-badge&logo=instagram&logoColor=E4405F) ![Behance](https://img.shields.io/badge/Behance-white?style=for-the-badge&logo=behance&logoColor=1769FF)
+
+![Behance](https://img.shields.io/badge/Behance-white?style=for-the-badge&logo=behance&logoColor=1769FF) ![LinkedIn](https://img.shields.io/badge/LinkedIn-white?style=for-the-badge&logo=linkedin&logoColor=0077B5) ![Instagram](https://img.shields.io/badge/Instagram-white?style=for-the-badge&logo=instagram&logoColor=E4405F) ![Discord](https://img.shields.io/badge/Discord-white?style=for-the-badge&logo=discord&logoColor=7289DA)
 
 <hr>
 <br>
