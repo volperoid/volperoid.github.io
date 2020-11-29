@@ -1,5 +1,5 @@
 <h1 align="center"><img src="media/blob.png" width="50%"></h1>
-<h2 align="center" style="background-color: rgba(40, 40, 40, 1); color: white;">About</h2>
+<h2 align="center" style="background-color: rgba(40, 40, 40, 1);">About</h2>
 <hr>
 <div align="center">
   
