@@ -1,4 +1,4 @@
-<h1 align="center"><img src="media/blob.png" width="50%">About</h1>
+<h1 align="center"><img src="media/blob.png" width="50%"># About</h1>
 
 <hr>
 <div align="center">
