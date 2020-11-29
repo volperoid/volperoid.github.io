@@ -2,9 +2,9 @@
 
 <h1 align="center">About</h1>
 
-<hr>
+
 <div align="center">
-  
+<hr>
 ![Reddit](https://img.shields.io/badge/Reddit-white?style=for-the-badge&logo=reddit&labelColor=white) ![Discord](https://img.shields.io/badge/Discord-white?style=for-the-badge&logo=discord&labelColor=white) ![Discord](https://img.shields.io/badge/Instagram-white?style=for-the-badge&logo=instagram&labelColor=white)
 <hr>
 <br>
