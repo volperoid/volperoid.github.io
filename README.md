@@ -1,9 +1,9 @@
-<div align="center">
-    <img src="media/blob.png" width="50%">
+<img src="media/blob.png" width="50%">
 
 # **About**
 <hr>
-
+<div align="center">
+    
 ![Reddit](https://img.shields.io/badge/Reddit-white?style=for-the-badge&logo=reddit&labelColor=white) ![Discord](https://img.shields.io/badge/Discord-white?style=for-the-badge&logo=discord&labelColor=white) ![Discord](https://img.shields.io/badge/Instagram-white?style=for-the-badge&logo=instagram&labelColor=white)
 <hr>
 
@@ -13,4 +13,5 @@
 |||![Status](https://img.shields.io/badge/TBD-inactive?style=for-the-badge)|
 |||![Status](https://img.shields.io/badge/TBD-inactive?style=for-the-badge)|
 |||![Status](https://img.shields.io/badge/TBD-inactive?style=for-the-badge)|
+
 </div>
