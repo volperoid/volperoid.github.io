@@ -1,4 +1,4 @@
-<img align="center" src="media/blob.png" width="50%">
+<h1 align="center"><img src="media/blob.png" width="50%"><h1>
 
 # **About**
 <hr>
