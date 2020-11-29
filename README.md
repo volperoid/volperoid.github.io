@@ -5,7 +5,7 @@
 <div align="center">
 <hr>
     
-![Reddit](https://img.shields.io/badge/Reddit-white?style=for-the-badge&logo=reddit&labelColor=white) ![Discord](https://img.shields.io/badge/Discord-white?style=for-the-badge&logo=discord&labelColor=white) ![Discord](https://img.shields.io/badge/Instagram-white?style=for-the-badge&logo=instagram&labelColor=white)
+![LinkedIn](https://img.shields.io/badge/LinkedIn-white?style=for-the-badge&logo=linkedin&labelColor=white) ![Discord](https://img.shields.io/badge/Discord-white?style=for-the-badge&logo=discord&labelColor=white) ![Instagram](https://img.shields.io/badge/Instagram-white?style=for-the-badge&logo=instagram&labelColor=white)
 
 <hr>
 <br>
