@@ -12,8 +12,8 @@
 
 |Project|Description|Status|Tags|
 |:-----:|:---------:|:----:|:--:|
-|![Project](https://img.shields.io/badge/Calculator-white?style=for-the-badge)|![Project](https://img.shields.io/badge/A%20simple%20calculator%20applet-white?style=for-the-badge)|![Status](https://img.shields.io/badge/1.0-Completed-success?style=for-the-badge&logo=github&labelColor=gray&link=https://www.volperoid.github.io)|![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&labelColor=E34F26&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&labelColor=1572B6&logoColor=white) ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&labelColor=F7DF1E&logoColor=black)
-|||![Status](https://img.shields.io/badge/TBD-inactive?style=for-the-badge)|
+|![Project](https://img.shields.io/badge/Calculator-white?style=for-the-badge)|![Description](https://img.shields.io/badge/A%20simple%20calculator%20applet-white?style=for-the-badge)|![Status](https://img.shields.io/badge/1.0-Completed-success?style=for-the-badge&logo=github&labelColor=gray&link=https://www.volperoid.github.io)|![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&labelColor=E34F26&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&labelColor=1572B6&logoColor=white) ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&labelColor=F7DF1E&logoColor=black)
+|![Project](https://img.shields.io/badge/Bondi%20Theme-white?style=for-the-badge)|![Description](https://img.shields.io/badge/A%20Bondi%20Theme%20Mockup-white?style=for-the-badge)|![Status](https://img.shields.io/badge/TBD-inactive?style=for-the-badge)|
 |||![Status](https://img.shields.io/badge/TBD-inactive?style=for-the-badge)|
 |||![Status](https://img.shields.io/badge/TBD-inactive?style=for-the-badge)|
 
