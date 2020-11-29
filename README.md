@@ -12,7 +12,7 @@
 
 |Project|Description|Status|Tags|
 |:-----:|:---------:|:----:|:--:|
-|`Calculator`|A simple calculator applet|![Status](https://img.shields.io/badge/1.0-Completed-success?style=for-the-badge&logo=github&labelColor=gray&link=https://www.volperoid.github.io)|![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&labelColor=E34F26&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&labelColor=1572B6&logoColor=white) ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&labelColor=F7DF1E&logoColor=black)
+|`Calculator`|`A simple calculator applet`|![Status](https://img.shields.io/badge/1.0-Completed-success?style=for-the-badge&logo=github&labelColor=gray&link=https://www.volperoid.github.io)|![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&labelColor=E34F26&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&labelColor=1572B6&logoColor=white) ![JS](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&labelColor=F7DF1E&logoColor=black)
 |||![Status](https://img.shields.io/badge/TBD-inactive?style=for-the-badge)|
 |||![Status](https://img.shields.io/badge/TBD-inactive?style=for-the-badge)|
 |||![Status](https://img.shields.io/badge/TBD-inactive?style=for-the-badge)|
