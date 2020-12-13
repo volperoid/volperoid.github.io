@@ -68,7 +68,6 @@ main {
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: ;
 }
 #btn0 {
     grid-column: 1 / 2;
