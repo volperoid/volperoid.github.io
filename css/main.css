@@ -19,6 +19,11 @@ html, body {
 body {
     background: linear-gradient(to top right, rgb(155, 50, 182), rgba(225, 215, 50, 1))
 }
+#themeToggle {
+    border-radius: 100%;
+    background-color: rebeccapurple;
+    width: 20px;
+}
 main {
     display: flex;
     align-items: center;
@@ -176,10 +181,4 @@ footer {
 }
 #blob:hover {
     bottom: -100px;
-}
-#poop {
-    position: fixed;
-    bottom: 0;
-    right: 30px;
-    z-index: 0;
 }

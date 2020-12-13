@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    outline: none !important;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 24pt;
+    text-align: center;
+    text-decoration: none !important;
+}
+:hover {
+    cursor: default !important;
+}
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    background-image: url(/media/starlight.svg);
+    background-color: rgba(0.5, 0.5, 0.5, 1);
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(5, 100px);
+    background-color: rgba(10, 10, 10, 0.8);
+}
+#wrapper {
+    display: flex;
+    justify-content: space-between;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.8);
+}
+#clear-btn {
+    box-sizing: content-box;
+    width: 100px;
+    height: 100px;
+    border-right: 5px solid rgba(0, 0, 0, 0.8);
+}
+#calc-display {
+    background-color: transparent;
+    color: silver;
+    width: 75%;
+    text-align: right;
+    letter-spacing: 2px;
+    padding: 0 20px;
+}
+#calc-display::placeholder {
+    color: silver;
+    opacity: 0.1;
+}
+#calc-display:focus {
+    caret-color: transparent;
+}
+.calc-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: ;
+}
+#btn0 {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+}
+#btn1 {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+#btn2 {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+#btn3 {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+#btn4 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+#btn5 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+#btn6 {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+#btn7 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+#btn8 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+#btn9 {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+#btn-add {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+}
+#btn-sub {
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+}
+#btn-multi {
+    grid-column: 4 / 5;
+    grid-row: 4 / 5;
+}
+#btn-div {
+    grid-column: 4 / 5;
+    grid-row: 5 / 6;
+}
+#btn-dec {
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+}
+#btn-eq {
+    grid-column: 3 / 4;
+    grid-row: 5 / 6;
+}
+span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    height: 70%;
+    border-radius: 100%;
+    color: silver;
+}
+#span-clear:hover {
+    color: indianred;
+    background-color: rgba(205, 92, 92, 0.1);
+}
+#span0:hover {
+    color: azure;
+    background-color: rgba(240, 255, 255, 0.1);
+}
+#span1:hover {
+    color: plum;
+    background-color: rgba(221, 160, 221, 0.1);
+}
+#span2:hover {
+    color: tomato;
+    background-color: rgba(255, 99, 71, 0.1);
+}
+#span3:hover {
+    color: crimson;
+    background-color: rgba(220, 20, 60, 0.1);
+}
+#span4:hover {
+    color: gold;
+    background-color: rgba(255, 215, 0, 0.1);
+}
+#span5:hover {
+    color: chartreuse;
+    background-color: rgba(127, 255, 0, 0.1);
+}
+#span6:hover {
+    color: teal;
+    background-color: rgba(0, 128, 128, 0.1);
+}
+#span7:hover {
+    color: springgreen;
+    background-color: rgba(0, 255, 127, 0.1);
+}
+#span8:hover {
+    color: sandybrown;
+    background-color: rgba(244, 164, 96, 0.1);
+}
+#span9:hover {
+    color: slateblue;
+    background-color: rgba(106, 90, 205, 0.1);
+}
+#span-add:hover {
+    color: cadetblue;
+    background-color: rgba(95, 158, 160, 0.1);
+}
+#span-sub:hover {
+    color: khaki;
+    background-color: rgba(240, 230, 140, 0.1);
+}
+#span-multi:hover {
+    color: orange;
+    background-color: rgba(255, 165, 0, 0.1);
+}
+#span-div:hover {
+    color: rosybrown;
+    background-color: rgba(188, 143, 143, 0.1);
+}
+#span-dec:hover {
+    color: coral;
+    background-color: rgba(255, 127, 80, 0.1);
+}
+#span-eq:hover {
+    color: hotpink;
+    background-color: rgba(255, 105, 180, 0.1);
+}
+footer, #credits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 1%;
+}
+#github {
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    padding: 5px 10px;
+    color: silver;
+    font-size: 12pt;
+    vertical-align: middle;
+    border-radius: 50px;
+    opacity: 0.25;
+}
+#github-icon {
+    padding-right: 0.5em;
+}
+#github:hover {
+    opacity: 1;
+    color: mediumpurple;
+}
+#blob {
+    position: fixed;
+    bottom: 0;
+    right: 10px;
+    z-index: 1;
+    transition: bottom 1s ease-in-out;
+    transform: translate() 1s ease-in-out;
+}
+#blob:hover {
+    bottom: -100px;
+}
