@@ -7,7 +7,7 @@
 
 <img src="media/.svg/instagram.svg" width="3.5%" style="padding: 0 50px 0 50px;">
 <img src="media/.svg/behance.svg" width="3.5%"  style="padding: 0 50px 0 50px;">
-<img src="media/.svg/linkedin.svg" width="3.5%" style="padding: 0 50px 0 50px;;">
+<img src="media/.svg/linkedin.svg" width="3.5%" style="padding: 0 50px 0 50px;">
 <img src="media/.svg/discord.svg" width="3.5%" style="padding: 0 50px 0 50px;">
 
 <hr>
