@@ -11,35 +11,38 @@
     <link rel="stylesheet" href="css/dark.css">
 </head>
 <body>
-    <main>
-        <div class="grid-box">
-            <div id="wrapper">
-                <button id="clear-btn" class="calc-btn" onclick="clearValue()"><span id="span-clear">C</span></button>
-                <input type="text" id="calc-display" placeholder="0">
-            </div>
-            <button name="0" id="btn0" class="calc-btn"><span id="span0" onclick="printValue(0)">0</span></button>
-            <button name="1" id="btn1" class="calc-btn"><span id="span1" onclick="printValue(1)">1</span></button>
-            <button name="2" id="btn2" class="calc-btn"><span id="span2" onclick="printValue(2)">2</span></button>
-            <button name="3" id="btn3" class="calc-btn"><span id="span3" onclick="printValue(3)">3</span></button>
-            <button name="4" id="btn4" class="calc-btn"><span id="span4" onclick="printValue(4)">4</span></button>
-            <button name="5" id="btn5" class="calc-btn"><span id="span5" onclick="printValue(5)">5</span></button>
-            <button name="6" id="btn6" class="calc-btn"><span id="span6" onclick="printValue(6)">6</span></button>
-            <button name="7" id="btn7" class="calc-btn"><span id="span7" onclick="printValue(7)">7</span></button>
-            <button name="8" id="btn8" class="calc-btn"><span id="span8" onclick="printValue(8)">8</span></button>
-            <button name="9" id="btn9" class="calc-btn"><span id="span9" onclick="printValue(9)">9</span></button>
-            <button name="add" id="btn-add" class="calc-btn"><span id="span-add" onclick="printValue('+')">+</span></button>
-            <button name="sub" id="btn-sub" class="calc-btn"><span id="span-sub" onclick="printValue('-')">-</span></button>
-            <button name="multi" id="btn-multi" class="calc-btn"><span id="span-multi" onclick="printValue('*')">*</span></button>
-            <button name="div" id="btn-div" class="calc-btn"><span id="span-div" onclick="printValue('/')">/</span></button>
-            <button name="dec" id="btn-dec" class="calc-btn"><span id="span-dec" onclick="printValue('.')">.</span></button>
-            <button name="eq" id="btn-eq" class="calc-btn"><span id="span-eq" onclick="calc()">=</span></button>
+    <div id="calculator">
+        <div id="wrapper">
+            <button id="clear-btn" class="calc-btn" onclick="clearValue()"><span id="span-clear">C</span></button>
+            <input type="text" id="calc-display" placeholder="0">
         </div>
-    </main>
+        <button name="0" id="btn0" class="calc-btn"><span id="span0" onclick="printValue(0)">0</span></button>
+        <button name="1" id="btn1" class="calc-btn"><span id="span1" onclick="printValue(1)">1</span></button>
+        <button name="2" id="btn2" class="calc-btn"><span id="span2" onclick="printValue(2)">2</span></button>
+        <button name="3" id="btn3" class="calc-btn"><span id="span3" onclick="printValue(3)">3</span></button>
+        <button name="4" id="btn4" class="calc-btn"><span id="span4" onclick="printValue(4)">4</span></button>
+        <button name="5" id="btn5" class="calc-btn"><span id="span5" onclick="printValue(5)">5</span></button>
+        <button name="6" id="btn6" class="calc-btn"><span id="span6" onclick="printValue(6)">6</span></button>
+        <button name="7" id="btn7" class="calc-btn"><span id="span7" onclick="printValue(7)">7</span></button>
+        <button name="8" id="btn8" class="calc-btn"><span id="span8" onclick="printValue(8)">8</span></button>
+        <button name="9" id="btn9" class="calc-btn"><span id="span9" onclick="printValue(9)">9</span></button>
+        <button name="add" id="btn-add" class="calc-btn"><span id="span-add" onclick="printValue('+')">+</span></button>
+        <button name="sub" id="btn-sub" class="calc-btn"><span id="span-sub" onclick="printValue('-')">-</span></button>
+        <button name="multi" id="btn-multi" class="calc-btn"><span id="span-multi" onclick="printValue('*')">*</span></button>
+        <button name="div" id="btn-div" class="calc-btn"><span id="span-div" onclick="printValue('/')">/</span></button>
+        <button name="dec" id="btn-dec" class="calc-btn"><span id="span-dec" onclick="printValue('.')">.</span></button>
+        <button name="eq" id="btn-eq" class="calc-btn"><span id="span-eq" onclick="calculate()">=</span></button>
+    </div>
     <footer>
-        <a id="github" href="https://volperoid.github.io/bondi.html"><i id="github-icon" class="fa fa-github"></i>Bondi Theme</a>
-        <a id="github" href="https://volperoid.github.io/bondi.html">Array Evaluator</a>
+        <i id="github-icon" class="fa fa-github">
+            <span id="author">volperoid</span>
+            <a id="github" href="https://volperoid.github.io/bondi.html">volperoid</a>
+            <a id="github" href="https://volperoid.github.io/bondi.html">Array Evaluator</a>
+        </i>
     </footer>
     <img id="blob" src="media/blob-grounded.png" alt="blob" width="2.5%">
-    <script src="js/engine.js"></script>
+    <script src="js/calculator/printValue.js"></script>
+    <script src="js/calculator/clearValue.js"></script>
+    <script src="js/calculator/calculate.js"></script>
 </body>
 </html>
