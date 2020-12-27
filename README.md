@@ -1,11 +1,14 @@
-<h1 align="center"><img src="media/blob.png" width="10%">
+<h1 align="center"><img src="media/.png/blob.png" width="10%">
 
     ABOUT
 </h1>
 <div align="center">
 <hr>
 
-![Behance](https://img.shields.io/badge/Behance-0d1117?style=for-the-badge&logo=behance&logoColor=1769FF)![LinkedIn](https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=linkedin&logoColor=0077B5)![Instagram](https://img.shields.io/badge/Instagram-0d1117?style=for-the-badge&logo=instagram&logoColor=E4405F)![Discord](https://img.shields.io/badge/Discord-0d1117?style=for-the-badge&logo=discord&logoColor=7289DA)
+<img src="media/.svg/instagram.svg" width="3.5%" style="padding: 0 50px 0 50px;">
+<img src="media/.svg/behance.svg" width="3.5%"  style="padding: 0 50px 0 50px;">
+<img src="media/.svg/linkedin.svg" width="3.5%" style="padding: 0 50px 0 50px;;">
+<img src="media/.svg/discord.svg" width="3.5%" style="padding: 0 50px 0 50px;">
 
 <hr>
 <br>
