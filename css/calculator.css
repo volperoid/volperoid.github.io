@@ -19,9 +19,11 @@ html, body {
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 body {
-    background-image: url(/media/starlight.svg);
+    background-image: url(/media/.svg/starlight.svg);
     background-color: rgba(0.5, 0.5, 0.5, 1);
 }
 #calculator {
