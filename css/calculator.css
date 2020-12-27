@@ -23,7 +23,7 @@ html, body {
     justify-content: center;
 }
 body {
-    background-image: url(/media/.svg/starlight.svg);
+    background-image: url(media/.svg/starlight.svg);
     background-color: rgba(0.5, 0.5, 0.5, 1);
 }
 #calculator {
