@@ -24,7 +24,7 @@ html, body {
 }
 body {
     background-color: rgba(0.5, 0.5, 0.5, 1);
-    background-image: url(media/svg/starlight.svg);
+    background-image: url(/media/svg/starlight.svg);
 }
 #calculator {
     display: grid;
