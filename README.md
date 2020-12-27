@@ -1,4 +1,4 @@
-<h1 align="center"><img src="media/.png/blob.png" width="10%">
+<h1 align="center"><img src="media/png/blob.png" width="10%">
 
     ABOUT
 </h1>
