@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Menu Bar</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #252525;
+        }
+        .menu {
+            display: flex;
+            flex-direction: column;
+            width: fit-content;
+            height: fit-content;
+        }
+        .spotlight {
+            box-sizing: content-box;
+            border-right: 3px solid #77889940;
+        }
+        #search-button-spotlight:hover {
+            border-right-color: #47d1cd;
+            background: linear-gradient(to left, #47d1cd40, #252525);
+        }
+        #randomize-button-spotlight:hover {
+            border-right-color: #9933ff;
+            background: linear-gradient(to left, #9933ff40, #252525);
+        }
+        #clear-button-spotlight:hover {
+            border-right-color: #db143c;
+            background: linear-gradient(to left, #db143c40, #252525);
+        }
+        .menu-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            padding: 0; /*! Prevents icon wriggling during animation in Firefox */
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        .menu-button .fa {
+            color: #77889940;
+        }
+        .menu-button:active .fa {
+            transform: scale(0.75);
+        }
+        #search:hover .fa-search {
+            color: #47d1cd;
+        }
+        #randomize:hover .fa-random {
+            color: #9933ff;
+        }
+        #clear:hover .fa-times {
+            color: #db143c;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <div id="search-button-spotlight" class="spotlight">
+            <button id="search" class="menu-button">
+                <i class="fa fa-search fa-3x"></i>
+            </button>
+        </div>
+        <div id="randomize-button-spotlight" class="spotlight">
+            <button id="randomize" class="menu-button">
+                <i class="fa fa-random fa-3x"></i>
+            </button>
+        </div>
+        <div id="clear-button-spotlight" class="spotlight">
+            <button id="clear" class="menu-button">
+                <i class="fa fa-times fa-3x"></i>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
