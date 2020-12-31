@@ -108,7 +108,7 @@ function randomArray() {
 
     let nodeList = document.getElementsByClassName("arrayElement");
 
-    for (let i = 1; i < nodeList.length; i++) {
+    for (let i = 0; i < nodeList.length; i++) {
 
         nodeList[i].value = getRandomIntInclusive(0, 9);
 
@@ -117,8 +117,6 @@ function randomArray() {
 
 function clearArray() {
 
-    let info = document.getElementById("output")
-    info.innerHTML = "";
     let nodeList = document.getElementsByClassName("arrayElement");
 
     for (let i = 0; i < nodeList.length; i++) {
@@ -127,18 +125,3 @@ function clearArray() {
 
     }
 }
-
-function hoverInOut(originColor, targetColor, origin, target) {
-
-    document.getElementById(origin).style.borderRightColor = originColor;
-    document.getElementById(target[0]).style.borderRightColor = targetColor;
-    document.getElementById(target[1]).style.borderRightColor = targetColor;
-
-}
-
-document.getElementById('search').addEventListener('mouseover', () => {hoverInOut('#47d1cd', '#47d1cd40', 'search', ['random', 'clear'])});
-document.getElementById('search').addEventListener('mouseout', () => {hoverInOut('#77889940', '#77889940', 'search', ['random', 'clear'])});
-document.getElementById('random').addEventListener('mouseover', () => {hoverInOut('#9933ff', '#9933ff40', 'random', ['search', 'clear'])});
-document.getElementById('random').addEventListener('mouseout', () => {hoverInOut('#77889940', '#77889940', 'random', ['search', 'clear'])});
-document.getElementById('clear').addEventListener('mouseover', () => {hoverInOut('#db143c', '#db143c40', 'clear', ['search', 'random'])});
-document.getElementById('clear').addEventListener('mouseout', () => {hoverInOut('#77889940', '#77889940', 'clear', ['search', 'random'])});

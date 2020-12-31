@@ -1,57 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/matrix.css">
-        <title>Array Evaluator</title>
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    <title>Menu Bar</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #252525;
+        }
+        #menu {
+            display: flex;
+            height: 400px;
+        }
+        .menu-bar {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: fit-content;
+            align-items: flex-end;
+        }
+        .spotlight {
+            display: flex;
+            justify-content: flex-end;
+            box-sizing: content-box;
+            border-right: 5px solid #77889940;
+            width: 100px;
+            transition: width 250ms ease-in-out;
+            transform-origin: right;
+        }
+        .spotlight:hover {
+            width: 200px;
+        }
+        #search:hover {
+            border-right-color: #47d1cd;
+            background: linear-gradient(to left, #47d1cd40, #252525);
+        }
+        #search:hover .fa-search {
+            color: #47d1cd;
+        }
+        #generate:hover {
+            border-right-color: #9933ff;
+            background: linear-gradient(to left, #9933ff40, #252525);
+        }
+        #generate:hover .fa-random {
+            color: #9933ff;
+        }
+        #grid:hover {
+            border-right-color: #f0e68c;
+            background: linear-gradient(to left, #f0e68c40, #252525);
+        }
+        #grid:hover .fa-th {
+            color: #f0e68c;
+        }
+        #clear:hover {
+            border-right-color: #db143c;
+            background: linear-gradient(to left, #db143c40, #252525);
+        }
+        #clear:hover .fa-times {
+            color: #db143c;
+        }
+        .menu-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            padding: 0; /*! Prevents icon wriggling during animation in Firefox */
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        .menu-button .fa {
+            transition: transform 100ms ease-in-out;
+            color: #77889940;
+        }
+        .menu-button:active .fa {
+            transform: scale(0.75);
+        }
+        #drawer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: width 250ms ease-in-out;
+            height: 100%;
+            width: 0;
+        }
+        #wrapper {
+            display: grid;
+            grid-template-columns: repeat(10, 31px);
+            grid-template-rows: repeat(10, 31px);
+            padding: 3px;
+            gap: 3px;
+            align-items: center;
+            justify-items: center;
+        }
+        .arrayElement {
+            text-align: center;
+            background-color: #77889940;
+            color: mediumturquoise;
+            outline: none;
+            border: 3px solid #252525;
+            border-radius: 3px;
+            padding: 0;
+            width: 25px;
+            height: 25px;
+            caret-color: transparent;
+            cursor: default;
+        }
+        .arrayElement:focus {
+            border-color: #f0e68c;
+        }
+    </style>
+</head>
 <body>
-    <div class="w-fit h-150px flex-row">
-        <div class="w-100px flex-column flex-column-right z-1">
-            <div id="search" class="buttonCallArea flex-row flex-row-right b-r-3px b-r-s b-77889940">
-                <button class="toolbar-button marker"><i class="fa fa-search fa-2x"></i></button>
-                <button class="toolbar-button slideIn" onclick="searchArray()"><i class="fg-47d1cd fa fa-search fa-2x pressDown"></i></button>
+    <div id="menu">
+        <div class="menu-bar">
+            <div id="search" class="spotlight">
+                <button class="menu-button">
+                    <i class="fa fas fa-search fa-3x"></i>
+                </button>
             </div>
-            <div id="random" class="buttonCallArea flex-row flex-row-right b-r-3px b-r-s b-77889940">
-                <button class="toolbar-button marker"><i class="fa fa-random fa-2x"></i></button>
-                <button class="toolbar-button slideIn" onclick="randomArray()"><i class="fg-9933ff fa fa-random fa-2x pressDown"></i></button>
+            <div id="generate" class="spotlight">
+                <button class="menu-button" onclick="randomArray()">
+                    <i class="fa fas fa-random fa-3x"></i>
+                </button>
             </div>
-            <div id="clear" class="buttonCallArea flex-row flex-row-right b-r-3px b-r-s b-77889940">
-                <button class="toolbar-button marker"><i class="fa fa-times fa-2x"></i></button>
-                <button class="toolbar-button slideIn" onclick="clearArray()"><i class="fg-db143c fa fa-times fa-2x pressDown"></i></button>
+            <div id="grid" class="spotlight" onclick="drawer()">
+                <button class="menu-button">
+                    <i class="fa fas fa-th fa-3x"></i>
+                </button>
+            </div>
+            <div id="clear" class="spotlight">
+                <button class="menu-button" onclick="clearArray()">
+                    <i class="fa fas fa-times fa-3x"></i>
+                </button>
             </div>
         </div>
-        <div class="bg-252525 w-fit h-fit z-2">
-            <div class="bg-77889910 w-fit h-fit">
-                <div id="array" class="flex-row">
-                    <input id="query" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i0" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i1" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i2" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i3" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i4" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i5" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i6" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i7" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i8" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i9" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i10" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i11" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i12" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i13" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i14" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i15" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i16" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i17" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i18" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                    <input id="i19" class="arrayElement bg-252525 b-3px b-s b-252525" type="number" placeholder="">
-                </div>
-                <p id="output" class="h-60px"></p>
+        <div id="drawer">
+            <div id="wrapper">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
+                <input name="" id="" class="arrayElement">
             </div>
         </div>
     </div>
-    <script src="js/matrix/matrix.js"></script>
+    <script>
+        function drawer() {
+            let state = document.getElementById('drawer').style.width;
+            if (state !== '400px') {
+                document.getElementById('drawer').style.width = '400px';
+            } else {
+                document.getElementById('drawer').style.width = '0px';
+            }
+        }
+    </script>
+    <script src="/js/matrix/matrix.js"></script>
 </body>
 </html>
