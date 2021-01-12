@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous"/>
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
     <title>Menu Bar</title>
     <style>
         html, body {
@@ -35,37 +40,6 @@
             transition: width 250ms ease-in-out;
             transform-origin: right;
         }
-        .spotlight:hover {
-            width: 200px;
-        }
-        #search:hover {
-            border-right-color: #47d1cd;
-            background: linear-gradient(to left, #47d1cd40, #252525);
-        }
-        #search:hover .fa-search {
-            color: #47d1cd;
-        }
-        #generate:hover {
-            border-right-color: #9933ff;
-            background: linear-gradient(to left, #9933ff40, #252525);
-        }
-        #generate:hover .fa-random {
-            color: #9933ff;
-        }
-        #grid:hover {
-            border-right-color: #f0e68c;
-            background: linear-gradient(to left, #f0e68c40, #252525);
-        }
-        #grid:hover .fa-th {
-            color: #f0e68c;
-        }
-        #clear:hover {
-            border-right-color: #db143c;
-            background: linear-gradient(to left, #db143c40, #252525);
-        }
-        #clear:hover .fa-times {
-            color: #db143c;
-        }
         .menu-button {
             display: flex;
             align-items: center;
@@ -76,6 +50,18 @@
             background-color: transparent;
             border: none;
             outline: none;
+        }
+        #search button:hover .fa-search {
+            color: #47d1cd;
+        }
+        #generate button:hover .fa-random {
+            color: #9933ff;
+        }
+        #grid button:hover .fa-th {
+            color: #f0e68c;
+        }
+        #clear button:hover .fa-times {
+            color: #db143c;
         }
         .menu-button .fa {
             transition: transform 100ms ease-in-out;
@@ -124,22 +110,22 @@
     <div id="menu">
         <div class="menu-bar">
             <div id="search" class="spotlight">
-                <button class="menu-button">
+                <button id="btn-search" class="menu-button" onclick="searchArray()">
                     <i class="fa fas fa-search fa-3x"></i>
                 </button>
             </div>
             <div id="generate" class="spotlight">
-                <button class="menu-button" onclick="randomArray()">
+                <button id="btn-generate" class="menu-button" onclick="randomArray()">
                     <i class="fa fas fa-random fa-3x"></i>
                 </button>
             </div>
             <div id="grid" class="spotlight" onclick="drawer()">
-                <button class="menu-button">
+                <button id="btn-grid" class="menu-button">
                     <i class="fa fas fa-th fa-3x"></i>
                 </button>
             </div>
             <div id="clear" class="spotlight">
-                <button class="menu-button" onclick="clearArray()">
+                <button id="btn-clear" class="menu-button" onclick="clearArray()">
                     <i class="fa fas fa-times fa-3x"></i>
                 </button>
             </div>
@@ -250,14 +236,61 @@
         </div>
     </div>
     <script>
+
         function drawer() {
+
             let state = document.getElementById('drawer').style.width;
+
             if (state !== '400px') {
                 document.getElementById('drawer').style.width = '400px';
             } else {
                 document.getElementById('drawer').style.width = '0px';
             }
         }
+
+        // * Inactive menu button styling //
+
+        idleState = {
+            'border-right-color': '#77889940',
+            'background': 'initial',
+            'width': '100px'
+        }
+
+        // * On hover menu button styling //
+
+        $('#btn-search').hover(
+            function() {
+                $('#search').css({'border-right-color': '#47d1cd', 'background': 'linear-gradient(to left, #47d1cd40, #252525)', 'width': '200px'});
+            },
+            function() {
+                $('#search').css(idleState);
+            }
+        );
+        $('#btn-generate').hover(
+            function() {
+                $('#generate').css({'border-right-color': '#9933ff', 'background': 'linear-gradient(to left, #9933ff40, #252525)', 'width': '200px'});
+            },
+            function() {
+                $('#generate').css(idleState);
+            }
+        );
+        $('#btn-grid').hover(
+            function() {
+                $('#grid').css({'border-right-color': '#f0e68c', 'background': 'linear-gradient(to left, #f0e68c40, #252525)', 'width': '200px'});
+            },
+            function() {
+                $('#grid').css(idleState);
+            }
+        );
+        $('#btn-clear').hover(
+            function() {
+                $('#clear').css({'border-right-color': '#db143c', 'background': 'linear-gradient(to left, #db143c40, #252525)', 'width': '200px'});
+            },
+            function() {
+                $('#clear').css(idleState);
+            }
+        );
+
     </script>
     <script src="/js/matrix/matrix.js"></script>
 </body>
