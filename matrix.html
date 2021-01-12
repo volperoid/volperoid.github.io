@@ -13,12 +13,13 @@
     <style>
         html, body {
             height: 100%;
+            background-color: #252525;
         }
-        body {
+        #container {
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #252525;
+            height: 100%;
         }
         #menu {
             display: flex;
@@ -107,134 +108,137 @@
     </style>
 </head>
 <body>
-    <div id="menu">
-        <div class="menu-bar">
-            <div id="search" class="spotlight">
-                <button id="btn-search" class="menu-button" onclick="searchArray()">
-                    <i class="fa fas fa-search fa-3x"></i>
-                </button>
+    <div id="container">
+        <div id="menu">
+            <div class="menu-bar">
+                <div id="search" class="spotlight">
+                    <button id="btn-search" class="menu-button" onclick="searchArray()">
+                        <i class="fa fas fa-search fa-3x"></i>
+                    </button>
+                </div>
+                <div id="generate" class="spotlight">
+                    <button id="btn-generate" class="menu-button" onclick="randomArray()">
+                        <i class="fa fas fa-random fa-3x"></i>
+                    </button>
+                </div>
+                <div id="grid" class="spotlight" onclick="drawer()">
+                    <button id="btn-grid" class="menu-button">
+                        <i class="fa fas fa-th fa-3x"></i>
+                    </button>
+                </div>
+                <div id="clear" class="spotlight">
+                    <button id="btn-clear" class="menu-button" onclick="clearArray()">
+                        <i class="fa fas fa-times fa-3x"></i>
+                    </button>
+                </div>
             </div>
-            <div id="generate" class="spotlight">
-                <button id="btn-generate" class="menu-button" onclick="randomArray()">
-                    <i class="fa fas fa-random fa-3x"></i>
-                </button>
-            </div>
-            <div id="grid" class="spotlight" onclick="drawer()">
-                <button id="btn-grid" class="menu-button">
-                    <i class="fa fas fa-th fa-3x"></i>
-                </button>
-            </div>
-            <div id="clear" class="spotlight">
-                <button id="btn-clear" class="menu-button" onclick="clearArray()">
-                    <i class="fa fas fa-times fa-3x"></i>
-                </button>
-            </div>
-        </div>
-        <div id="drawer">
-            <div id="wrapper">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
-                <input name="" id="" class="arrayElement">
+            <div id="drawer">
+                <div id="wrapper">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                    <input name="" id="" class="arrayElement">
+                </div>
             </div>
         </div>
     </div>
+
     <script>
 
         function drawer() {
