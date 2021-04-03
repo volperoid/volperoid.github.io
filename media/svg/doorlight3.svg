@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 600 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-miterlimit:1.5;">
+    <g id="Layer1">
+        <path d="M78.86,596.581C79.541,598.623 81.452,600 83.604,600C91.204,600 108.796,600 116.396,600C118.548,600 120.459,598.623 121.14,596.581C123.879,588.364 130.95,567.151 135.613,553.162C136.629,550.113 136.118,546.761 134.238,544.153C132.359,541.545 129.34,540 126.126,540C111.478,540 88.522,540 73.874,540C70.66,540 67.641,541.545 65.762,544.153C63.882,546.761 63.371,550.113 64.387,553.162C69.05,567.151 76.121,588.364 78.86,596.581Z" style="fill:white;stroke:white;stroke-width:1.11px;"/>
+        <path d="M100,540L100,440L100,500L99.998,500C89.39,500 79.216,495.786 71.715,488.285C64.214,480.784 60,470.61 60,460.002L60,460" style="fill:none;stroke:rgb(0,255,185);stroke-width:3.89px;stroke-linecap:butt;"/>
+        <path d="M100,480L120,480C131.046,480 140,471.046 140,460C140,460 140,460 140,460" style="fill:none;stroke:rgb(0,255,185);stroke-width:3.89px;"/>
+        <path d="M100,520L120,520" style="fill:none;stroke:rgb(0,255,185);stroke-width:3.89px;"/>
+        <circle cx="100" cy="440" r="20" style="fill:rgb(254,84,66);stroke:rgb(254,84,66);stroke-width:1.11px;"/>
+        <circle cx="140" cy="460" r="20" style="fill:rgb(255,116,119);stroke:rgb(255,116,119);stroke-width:1.11px;"/>
+        <circle cx="65" cy="475" r="25" style="fill:rgb(255,170,82);stroke:rgb(255,170,82);stroke-width:1.11px;"/>
+        <circle cx="119.667" cy="515" r="15" style="fill:rgb(123,94,198);stroke:rgb(123,94,198);stroke-width:1.11px;"/>
+    </g>
+    <circle cx="330" cy="410" r="10" style="fill:white;stroke:white;stroke-width:1.11px;"/>
+    <path d="M360,180L400,200L400,600L360,620L360,180ZM200,600L360,620L350,625L200,600Z" style="fill:white;stroke:white;stroke-width:1.11px;"/>
+</svg>
