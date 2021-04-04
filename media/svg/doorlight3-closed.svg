@@ -9,7 +9,7 @@
         <circle cx="100" cy="440" r="20" style="fill:rgb(254,84,66);stroke:rgb(254,84,66);stroke-width:1.11px;"/>
         <circle cx="140" cy="460" r="20" style="fill:rgb(255,116,119);stroke:rgb(255,116,119);stroke-width:1.11px;"/>
         <circle cx="65" cy="475" r="25" style="fill:rgb(255,170,82);stroke:rgb(255,170,82);stroke-width:1.11px;"/>
-        <circle cx="119.667" cy="515" r="15" style="fill:rgb(123,94,198);stroke:rgb(123,94,198);stroke-width:1.11px;"/>
+        <circle cx="130" cy="520" r="15" style="fill:rgb(123,94,198);stroke:rgb(123,94,198);stroke-width:1.11px;"/>
     </g>
     <circle cx="370" cy="410" r="10" style="fill:white;stroke:white;stroke-width:1.11px;"/>
     <path d="M400,200L400,600L200,600" style="fill:none;stroke:white;stroke-width:1.11px;stroke-linecap:butt;"/>
