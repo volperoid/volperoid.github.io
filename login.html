@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dosis:wght@200&family=Poiret+One&family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+            cursor: default;
+            font-family: 'Varela Round';
+            text-align: center;
+            vertical-align: middle;
+        }
+        html, body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+            background-image: linear-gradient(to top right, goldenrod, hotpink);
+        }
+        main {
+            display: grid;
+            grid-template: "a b c" / 1fr 8px 1fr;
+            align-items: center;
+            justify-items: center;
+            width: 50%;
+            height: 70%;
+            background-color: #ffffff40;
+            border-radius: 25px;
+        }
+        #separator {
+            background-color: #ffffff40;
+            width: 8px;
+            height: 88%;
+            border-radius: 25px;
+        }
+        .section {
+            display: grid;
+            grid-template:
+            "title" max-content
+            "inputs" 1fr
+            "button" max-content;
+            align-content: center;
+            align-items: center;
+            justify-items: center;
+            width: 70%;
+            height: 88%;
+            background-color: transparent;
+        }
+        h1 {
+            font-size: 20px;
+            font-variant: small-caps;
+            color: #ffffffbf;
+            margin: 40px 0;
+        }
+        .input-field {
+            display: grid;
+            grid-template:
+            "input-A" max-content
+            "input-B" max-content
+            "input-C" max-content;
+            align-content: center;
+        }
+        input[type=text], input[type=email], input[type=password], input::placeholder {
+            background-color: transparent;
+            border-bottom: 1px solid #ffffff80;
+            color: #ffffff80;
+            padding: 5px 10px;
+            margin: 20px 0;
+            font-size: 20px;
+        }
+        input:hover, input:hover::placeholder {
+            border-color: #ffffffbf;
+            color: #ffffffbf;
+        }
+        input:focus {
+            border-color: #ffffff;
+            color: #ffffff;
+        }
+        input:focus::placeholder {
+            color: transparent;
+        }
+        #enter-password {
+            display: grid;
+            grid-template:
+            "a" max-content
+            "b" max-content;
+            align-items: center;
+            justify-items: center;
+        }
+        #password {
+            margin-bottom: 10px;
+        }
+        #gauge {
+            display: grid;
+            grid-template:
+            "a b c d e" 1fr;
+            align-items: center;
+            justify-items: center;
+            width: max-content;
+            margin-bottom: 20px;
+        }
+        .gauge-bar {
+            width: 20px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #ffffff;
+            border-radius: 25px;
+        }
+        #checkbox {
+            appearance: none;
+            background-clip: padding-box;
+            background-color: #ffffff80;
+            width: 20px;
+            height: 20px;
+            border: 5px solid #ffffff80;
+            border-radius: 100%;
+        }
+        #checkbox:hover {
+            background-color: #ffffffbf;
+            border-color: #ffffffbf;
+        }
+        #checkbox:checked {
+            background-color: salmon;
+            border-color: #ffffff;
+        }
+        span {
+            color: #ffffffbf;
+        }
+        #checkbox:checked + span {
+            color: #ffffff;
+        }
+        button {
+            background-color: salmon;
+            border-radius: 25px;
+            padding: 10px 20px;
+            margin: 40px 0;
+            font-size: 20px;
+            font-variant: small-caps;
+            color: #ffffffbf;
+            box-shadow: 0 1px 1px 0 rgba(0,0,0,0.14), 0 2px 1px -1px rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.20);
+            transition: all 10ms 5ms;
+        }
+        button:hover, button:active {
+            box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="register" class="section">
+            <div class="section-title">
+                <h1>create account</h1>
+            </div>
+            <div class="input-field">
+                <div id="enter-email">
+                    <input type="email" name="" id="email" placeholder="E-mail">
+                </div>
+                <div id="enter-password">
+                    <input type="password" name="password" id="password" placeholder="Password">
+                    <div id="gauge">
+                        <div id="g0" class="gauge-bar"></div>
+                        <div id="g1" class="gauge-bar"></div>
+                        <div id="g2" class="gauge-bar"></div>
+                        <div id="g3" class="gauge-bar"></div>
+                        <div id="g4" class="gauge-bar"></div>
+                    </div>
+                </div>
+                <div id="confirm-password">
+                    <input type="password" name="password-pair" id="password-pair" placeholder="Confirm Password">
+                </div>
+            </div>
+            <div class="action">
+                <button>register</button>
+            </div>
+        </div>
+        <div id="separator"></div>
+        <div id="login" class="section">
+            <div class="section-title">
+                <h1>sign in</h1>
+            </div>
+            <div class="input-field">
+                <div id="input-user">
+                    <input type="text" name="user" id="user" placeholder="Username">
+                </div>
+                <div id="input-key">
+                    <input type="password" name="key" id="key" placeholder="Password">
+                </div>
+                <div id="option">
+                    <input type="checkbox" name="checkbox" id="checkbox">
+                    <span>Remember Me (30 Days)</span>
+                </div>
+            </div>
+            <div class="action">
+                <button>login</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
