@@ -6,6 +6,7 @@ header {
     background-image: url("../media/car-8.jpg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: cover;
     color: #ffffff;
     width: 100vw;
     height: 100vh;
