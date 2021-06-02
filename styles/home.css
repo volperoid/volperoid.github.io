@@ -9,7 +9,7 @@ header {
     background-size: cover;
     color: #ffffff;
     width: 100%;
-    height: 50%;
+    height: 100vh;
 }
 #container {
     display: flex;
@@ -51,7 +51,7 @@ header {
     color: crimson;
     background-color: transparent;
     animation-name: "glow";
-    animation-duration: 2.5s;
+    animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     text-shadow: none;
@@ -97,15 +97,15 @@ header {
 }
 .illustration {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
     text-align: center;
     width: 20%;
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all 1s;
+    transition: all 1s ease-in-out;
     flex: 1;
 }
 #photo-a {
@@ -124,41 +124,41 @@ header {
     background-image: url("../media/car-11.jpg");
 }
 .illustration:hover {
-    width: 50vw;
+    width: 90vw;
     flex: 5;
 }
 .wrapper {
     visibility: hidden;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
     justify-content: center;
-    width: 100%;
-    height: 33.33%;
-    background-color: hsla(0, 0%, 15%, 0.9);
-    color: white;
+    width: 33.33%;
+    height: 100%;
+    background-color: hsla(0, 0%, 100%, 0.75);
+    color: black;
     padding: 10px 20px;
+    overflow-x: hidden;
+    transition: all 1s ease-in;
 }
 .illustration:hover .wrapper {
     visibility: visible;
 }
+.category {
+    font-size: 23px;
+    padding: 10px 20px;
+}
 .info {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-.info p, .info h1 {
-    width: 50%;
-    overflow: hidden;
+    font-size: 18px;
+    padding: 0 8px;
 }
 .explore {
     width: 100%;
     height: 100%;
-    background-color: #25252590;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -167,9 +167,11 @@ header {
     display: block;
     text-decoration: none;
     padding: 10px 20px;
-    border: 1px solid white;
-    color: white;
+    border: 1px solid black;
+    color: black;
+    font-size: 24px;
 }
 #link-btn:hover {
-    background-color: hsla(0, 0%, 100%, 0.5);
+    background-color: #000000;
+    color: white;
 }
