@@ -4,6 +4,8 @@ header {
     align-items: center;
     justify-content: center;
     background-image: url("../media/car-8.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
     color: #ffffff;
     width: 100vw;
     height: 100vh;
