@@ -49,6 +49,7 @@ header {
 #number-8 {
     border: 1px solid crimson;
     color: crimson;
+    background-color: transparent;
     animation-name: "glow";
     animation-duration: 2.5s;
     animation-iteration-count: infinite;
@@ -60,11 +61,13 @@ header {
         text-shadow: none;
         color: hsla(348, 83%, 47%, 0.25);
         border-color: hsla(348, 83%, 47%, 0.25);
+        background-color: transparent;
     }
     to {
         text-shadow: 0 0 8px crimson;
         color: crimson;
         border-color: crimson;
+        background-color: hsla(348, 83%, 47%, 0.75);
     }
 }
 #city {
