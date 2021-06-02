@@ -1,0 +1,200 @@
+
+/** CSS Reset */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    cursor: default;
+}
+
+/** Icons */
+
+.material-icons, .material-icons-outlined, .material-icons-two-tone, .material-icons-round, .material-icons-sharp {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/** Common Styling */
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Dosis', 'Varela Round', Arial, Helvetica, sans-serif;
+    scrollbar-color: dark;
+}
+
+/** Color Classes */
+
+.font-light {
+    color: #ffffff;
+}
+.font-light-tp {
+    color: #ffffff80;
+}
+.font-dark {
+    color: #000000;
+}
+.font-dark-tp {
+    color: #00000080;
+}
+
+/** index.html */
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("media/car-4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: transparent;
+    width: 100%;
+}
+#settings {
+    display: grid;
+    grid-template: "a b c d" 1fr;
+}
+#settings button {
+    background-color: transparent;
+    margin: 5px;
+}
+#settings span {
+    color: #ffffff20;
+}
+#settings button:hover span, #settings button:active span {
+    color: #ffffff;
+}
+#logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+    font-size: 96px;
+    font-family: 'Poiret One';
+}
+#logo-box {
+    display: grid;
+    grid-template:
+    "a d g" 1fr
+    "b e h" 1fr
+    "c f i" 1fr /  1fr 1fr 1fr;
+    gap: 5px;
+    align-items: center;
+    justify-items: center;
+    margin-right: 192px;
+}
+.logo-glyph {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.logo-glyph span {
+    padding: 10px 20px;
+}
+#a.logo-glyph {
+    opacity: 0.2;
+}
+#b.logo-glyph {
+    opacity: 0.5;
+}
+#c.logo-glyph {
+    opacity: 0.8;
+}
+#d.logo-glyph {
+    opacity: 0.3;
+}
+#e.logo-glyph {
+    opacity: 0.6;
+}
+#f.logo-glyph {
+    opacity: 0.9;
+}
+#g.logo-glyph {
+    opacity: 0.4;
+}
+#h.logo-glyph {
+    opacity: 0.7;
+}
+#i.logo-glyph {
+    color: crimson;
+    border: 1px solid crimson;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    background-color: #25252580;
+}
+nav ul{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template: "a b c d e f" 1fr;
+    width: 100%;
+    list-style: none;
+}
+nav ul li {
+    font-family: 'Poiret One';
+    font-size: 24px;
+    width: 100%;
+    height: 100%;
+}
+nav a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    background-clip: border-box;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+nav a:hover {
+    background-color: #252525;
+}
+iframe {
+    width: 50px;
+    max-width: 50px;
+    height: 50px;
+}
+main, #gallery {
+    max-width: 100vw;
+}
+#gallery {
+    display: grid;
+    gap: 5px;
+    max-width: 100vw;
+    grid-template-columns: repeat(9, 1fr);
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    margin-top: 5px;
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #30303020;
+}
+.table, thead, th, tr, td {
+    text-align: center;
+    vertical-align: middle;
+    font-style: normal;
+}

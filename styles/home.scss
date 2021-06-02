@@ -1,0 +1,73 @@
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../media/car-8.jpg");
+    color: #ffffff;
+    width: 100vw;
+    height: 100vh;
+}
+#container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 75%;
+    height: 100%;
+}
+#banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, 0.70);
+    font-family: 'Poiret One';
+}
+#logo {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3, 118px);
+    grid-template-rows: repeat(3, 118px);
+    gap: 8px;
+    padding: 48px;
+    font-size: 48px;
+}
+#logo div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+#number-8 {
+    border: 1px solid crimson;
+    color: crimson;
+    animation-name: "glow";
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    text-shadow: none;
+}
+@keyframes glow {
+    from {
+        text-shadow: none;
+        color: hsla(348, 83%, 47%, 0.25);
+        border-color: hsla(348, 83%, 47%, 0.25);
+    }
+    to {
+        text-shadow: 0 0 18px crimson;
+        color: crimson;
+        border-color: crimson;
+    }
+}
+#city {
+    margin-top: 48px;
+    text-align: center;
+    vertical-align: middle;
+    color: hsla(0, 0%, 100%, 0.50);
+    font-size: 24px;
+}
