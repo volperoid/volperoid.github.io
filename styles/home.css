@@ -8,8 +8,8 @@ header {
     background-position: center;
     background-size: cover;
     color: #ffffff;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 50%;
 }
 #container {
     display: flex;
@@ -82,4 +82,43 @@ header {
 }
 #visit:hover {
     color: white;
+}
+
+/**************************************************/
+
+.accordion {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    overflow: clip;
+    height: 100vh;
+}
+.illustration {
+    width: 20%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s;
+    flex: 1;
+}
+#photo-a {
+    background-image: url("../media/car-18.jpg");
+}
+#photo-b {
+    background-image: url("../media/car-4.jpg");
+}
+#photo-c {
+    background-image: url("../media/car-5.jpg");
+}
+#photo-d {
+    background-image: url("../media/car-7.jpg");
+}
+#photo-e {
+    background-image: url("../media/car-11.jpg");
+}
+.illustration:hover {
+    width: 50vw;
+    flex: 5;
 }
