@@ -93,6 +93,7 @@ header {
     justify-content: center;
     overflow: clip;
     height: 100vh;
+    font-family: 'Poiret One';
 }
 .illustration {
     display: flex;
