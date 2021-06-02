@@ -169,3 +169,6 @@ header {
     border: 1px solid white;
     color: white;
 }
+#link-btn:hover {
+    background-color: hsla(0, 0%, 100%, 0.5);
+}
