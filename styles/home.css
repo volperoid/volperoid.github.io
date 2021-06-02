@@ -95,6 +95,10 @@ header {
     height: 100vh;
 }
 .illustration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 20%;
     height: 100%;
     background-position: center;
@@ -121,4 +125,35 @@ header {
 .illustration:hover {
     width: 50vw;
     flex: 5;
+}
+.wrapper {
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: hsla(0, 0%, 15%, 0.9);
+    color: white;
+    padding: 10px 20px;
+}
+.info p, .info h1 {
+    width: 50%;
+}
+.explore {
+    background-color: #25252590;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.illustration:hover .wrapper {
+    visibility: visible;
+}
+#link-btn {
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 1px solid white;
+    color: white;
 }
