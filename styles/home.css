@@ -100,7 +100,7 @@ header {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    width: 0px; /* ! arbitrary value; keep at 0 - 100px */
+    width: 0; /* ! I have no idea why, but it works. Keep this at 0 */
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
