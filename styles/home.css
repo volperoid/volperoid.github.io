@@ -100,13 +100,17 @@ header {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    width: 20%;
+    width: 0px; /* ! arbitrary value; keep at 0 - 100px */
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: all 1s ease-in-out;
+    transition: flex 1s ease-in-out;
     flex: 1;
+    overflow: clip;
+}
+.illustration:hover {
+    flex: 10;
 }
 #photo-a {
     background-image: url("../media/car-18.jpg");
@@ -123,12 +127,7 @@ header {
 #photo-e {
     background-image: url("../media/car-11.jpg");
 }
-.illustration:hover {
-    width: 90vw;
-    flex: 5;
-}
 .wrapper {
-    visibility: hidden;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
@@ -136,14 +135,19 @@ header {
     justify-content: center;
     width: 33.33%;
     height: 100%;
-    background-color: hsla(0, 0%, 100%, 0.75);
+    background-color: transparent;
     color: black;
-    padding: 10px 20px;
+    opacity: 0;
+    padding: 10px 0;
     overflow-x: hidden;
-    transition: all 1s ease-in;
+    transition: all 1s;
+    transform: translateX(-100%);
 }
 .illustration:hover .wrapper {
-    visibility: visible;
+    transform: translateX(0);
+    padding: 10px 20px;
+    opacity: 1;
+    background-color: hsla(0, 0%, 100%, 0.75);
 }
 .category {
     font-size: 23px;
