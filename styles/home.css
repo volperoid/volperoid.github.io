@@ -25,7 +25,7 @@ header {
     justify-content: center;
     width: fit-content;
     height: 100%;
-    background-color: hsla(0, 0%, 0%, 0.70);
+    background-color: #121212cc;
     font-family: 'Poiret One';
 }
 #logo {
@@ -116,16 +116,16 @@ header {
     background-image: url("../media/car-18.jpg");
 }
 #photo-b {
-    background-image: url("../media/car-4.jpg");
+    background-image: url("../media/continental.jpg");
 }
 #photo-c {
-    background-image: url("../media/car-5.jpg");
+    background-image: url("../media/performance.jpg");
 }
 #photo-d {
-    background-image: url("../media/car-7.jpg");
+    background-image: url("../media/vintage.jpg");
 }
 #photo-e {
-    background-image: url("../media/car-11.jpg");
+    background-image: url("../media/parts-3.jpg");
 }
 .wrapper {
     display: grid;
@@ -136,7 +136,7 @@ header {
     width: 33.33%;
     height: 100%;
     background-color: transparent;
-    color: black;
+    color: #121212;
     opacity: 0;
     overflow-x: hidden;
     transition: all 1s;
@@ -144,9 +144,8 @@ header {
 }
 .illustration:hover .wrapper {
     transform: translateX(0);
-    padding: 10px 20px;
     opacity: 1;
-    background-color: hsla(0, 0%, 100%, 0.75);
+    background-color: hsla(0, 0%, 100%, 0.80);
 }
 .category {
     display: flex;
@@ -156,15 +155,14 @@ header {
     height: 100%;
 }
 .category h1 {
-    width: 100%;
+    width: 70%;
     font-size: 48px;
-    padding: 0 15%;
 }
 .info {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 24px;
     width: 100%;
     height: 100%;
 }
@@ -172,21 +170,25 @@ header {
     width: 70%;
 }
 .explore {
-    width: 100%;
+    width: fit-content;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
+    font-size: 24px;
 }
-#link-btn {
+.link-btn {
+    width: 100%;
     display: block;
     text-decoration: none;
     padding: 10px 20px;
-    border: 1px solid black;
-    color: black;
-    font-size: 24px;
+    border: 1px solid #121212;
+    color: #121212;
 }
-#link-btn:hover {
-    background-color: #000000;
+.link-btn:hover {
+    background-color: #121212;
     color: white;
 }
+
+/*******************************************/
