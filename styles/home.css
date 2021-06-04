@@ -1,4 +1,6 @@
-
+body {
+    background: #121212 center no-repeat fixed;
+}
 header {
     display: flex;
     align-items: center;
@@ -83,7 +85,59 @@ header {
 #visit:hover {
     color: white;
 }
-
+#categories {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+    height: 20vh;
+    font-size: 100%;
+    padding: 24px 48px;
+    background-color: #121212cc;
+    color: white;
+}
+.dot-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 50px;
+}
+.dots-3 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 50px;
+}
+.dots-2 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 1fr 1fr;
+    height: 30px;
+}
+.dots-1 {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: 1fr;
+    height: 10px;
+}
+.dot {
+    background-color: crimson;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+}
+#categories h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-left: 24px;
+}
 /**************************************************/
 
 .accordion {
@@ -92,7 +146,7 @@ header {
     justify-items: center;
     justify-content: center;
     overflow: clip;
-    height: 100vh;
+    height: 80vh;
     font-family: 'Poiret One';
 }
 .illustration {
@@ -192,3 +246,42 @@ header {
 }
 
 /*******************************************/
+
+#arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    bottom: 1vh;
+    left: 50vw;
+    position: sticky;
+    font-family: 'material-icons-round';
+    z-index: 9;
+}
+#arrow:hover, #arrow a:hover {
+    cursor:;
+}
+#arrow a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+}
+#arrow span {
+    font-size: 100px;
+    color: crimson;
+    animation: hop 700ms infinite alternate ease-in-out;
+}
+@keyframes hop {
+    from {
+        color: #db143c00;
+        transform: translateY(-10%);
+    }
+    to {
+        color: crimson;
+        transform: translateY(10%);
+    }
+}
