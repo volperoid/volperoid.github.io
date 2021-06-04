@@ -259,9 +259,6 @@ header {
     font-family: 'material-icons-round';
     z-index: 9;
 }
-#arrow:hover, #arrow a:hover {
-    cursor:;
-}
 #arrow a {
     display: flex;
     align-items: center;
