@@ -176,10 +176,10 @@ header {
     background-image: url("../media/performance.jpg");
 }
 #photo-d {
-    background-image: url("../media/vintage.jpg");
+    background-image: url("../media/oldtimer.jpg");
 }
 #photo-e {
-    background-image: url("../media/parts-3.jpg");
+    background-image: url("../media/components.jpg");
 }
 .wrapper {
     display: grid;
