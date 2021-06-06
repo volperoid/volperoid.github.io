@@ -217,11 +217,13 @@ header {
     transition: all 1s;
     transform: translateX(-100%);
 }
+/*
 .illustration:hover .wrapper {
     transform: translateX(0);
     opacity: 1;
-    background-color: hsla(0, 0%, 100%, 0.80);
+    background-color: #ffffffcc;
 }
+*/
 .category {
     display: flex;
     align-items: center;
