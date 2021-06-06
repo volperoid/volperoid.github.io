@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
     <link rel="shortcut icon" href="favicon.png" type="image/png">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -25,46 +27,46 @@
             <div id="banner">
                 <div id="logo">
                     <div>
-                        <span class="op-20">
+                        <span id="glyph-0">
                             C
                         </span>
                     </div>
                     <div>
-                        <span class="op-50">
+                        <span id="glyph-1">
                             E
                         </span>
                     </div>
                     <div>
-                        <span class="op-80">
+                        <span id="glyph-2">
                             N
                         </span>
                     </div>
                     <div>
-                        <span class="op-30">
+                        <span id="glyph-3">
                             T
                         </span>
                     </div>
                     <div>
-                        <span class="op-60">
+                        <span id="glyph-4">
                             R
                         </span>
                     </div>
                     <div>
-                        <span class="op-90">
+                        <span id="glyph-5">
                             A
                         </span>
                     </div>
                     <div>
-                        <span class="op-40">
+                        <span id="glyph-6">
                             L
                         </span>
                     </div>
                     <div>
-                        <span class="op-70">
+                        <span id="glyph-7">
                             E
                         </span>
                     </div>
-                    <div id="number-8">
+                    <div id="glyph-8">
                         <span>
                             8
                         </span>
@@ -97,7 +99,7 @@
             </h1>
         </div>
         <div class="accordion">
-            <div id="photo-a" class="illustration">
+            <div id="slide0" class="illustration">
                 <div class="wrapper">
                     <div class="category">
                         <h1>Urban</h1>
@@ -110,7 +112,7 @@
                     </div>
                 </div>
             </div>
-            <div id="photo-b" class="illustration">
+            <div id="slide1" class="illustration">
                 <div class="wrapper">
                     <div class="category">
                         <h1>Continental</h1>
@@ -123,7 +125,7 @@
                     </div>
                 </div>
             </div>
-            <div id="photo-c" class="illustration">
+            <div id="slide2" class="illustration">
                 <div class="wrapper">
                     <div class="category">
                         <h1>Performance</h1>
@@ -136,7 +138,7 @@
                     </div>
                 </div>
             </div>
-            <div id="photo-d" class="illustration">
+            <div id="slide3" class="illustration">
                 <div class="wrapper">
                     <div class="category">
                         <h1>Vintage</h1>
@@ -149,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <div id="photo-e" class="illustration">
+            <div id="slide4" class="illustration">
                 <div class="wrapper">
                     <div class="category">
                         <h1>Components</h1>
@@ -171,5 +173,41 @@
             </span>
         </a>
     </div>
+    <script>
+        const nodeList = document.querySelectorAll('.illustration');
+        function flexIt(target){
+            console.log(target.style.flex);
+            const neighbor = document.querySelectorAll('.illustration');
+            if (target.style.flex !== 10) {
+                target.style.flex = 10;
+                for (let i = 0; i < nodeList.length; i++) {
+                    if ('slide'+i !== target.id) {
+                        document.querySelector('#slide'+i).style.flex = 1;
+                    }
+                }
+                console.log(target.style.flex);
+            } else {
+                target.style.flex = 1;
+            }
+        }
+        nodeList.forEach(element => {
+            element.addEventListener('click', () => {flexIt(element)});
+            element.addEventListener('hover', () => {dimIt(element)});
+        });
+
+
+
+        /*
+        function dimIt(target){
+            target.style.filter = 'sepia(75%)';
+        }
+        document.querySelector('#slide0').addEventListener('hover', dimIt(document.querySelector('#slide0')));
+        document.querySelector('#slide1').addEventListener('hover', dimIt(document.querySelector('#slide1')));
+        document.querySelector('#slide2').addEventListener('hover', dimIt(document.querySelector('#slide2')));
+        document.querySelector('#slide3').addEventListener('hover', dimIt(document.querySelector('#slide3')));
+        document.querySelector('#slide4').addEventListener('hover', dimIt(document.querySelector('#slide4')));
+        */
+
+    </script>
 </body>
 </html>

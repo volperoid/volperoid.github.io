@@ -48,21 +48,42 @@ header {
     height: 100%;
     padding: 5px;
 }
-#number-8 {
+#glyph-0 {
+    opacity: 23%;
+}
+#glyph-1 {
+    opacity: 34%;
+}
+#glyph-2 {
+    opacity: 45%;
+}
+#glyph-3 {
+    opacity: 56%;
+}
+#glyph-4 {
+    opacity: 67%;
+}
+#glyph-5 {
+    opacity: 78%;
+}
+#glyph-6 {
+    opacity: 89%;
+}
+#glyph-7 {
+    opacity: 100%;
+}
+#glyph-8 {
     border: 1px solid crimson;
     color: crimson;
     background-color: transparent;
-    animation-name: "glow";
-    animation-duration: 1.25s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation: glow 1.5s infinite alternate ease-in;
     text-shadow: none;
 }
 @keyframes glow {
     from {
         text-shadow: none;
-        color: hsla(348, 83%, 47%, 0.25);
-        border-color: hsla(348, 83%, 47%, 0.25);
+        color: hsla(348, 83%, 47%, 0.2);
+        border-color: hsla(348, 83%, 47%, 0.2);
     }
     to {
         text-shadow: 0 0 8px crimson;
@@ -163,22 +184,22 @@ header {
     flex: 1;
     overflow: clip;
 }
-.illustration:hover {
-    flex: 10;
-}
-#photo-a {
+
+
+
+#slide0 {
     background-image: url("../media/car-18.jpg");
 }
-#photo-b {
+#slide1 {
     background-image: url("../media/continental.jpg");
 }
-#photo-c {
+#slide2 {
     background-image: url("../media/performance.jpg");
 }
-#photo-d {
+#slide3 {
     background-image: url("../media/oldtimer.jpg");
 }
-#photo-e {
+#slide4 {
     background-image: url("../media/components.jpg");
 }
 .wrapper {
@@ -269,16 +290,15 @@ header {
 }
 #arrow span {
     font-size: 100px;
-    color: crimson;
-    animation: hop 700ms infinite alternate ease-in-out;
+    animation: hop 850ms infinite alternate ease-in-out;
 }
 @keyframes hop {
     from {
-        color: #db143c00;
+        color: #ffffff00;
         transform: translateY(-10%);
     }
     to {
-        color: crimson;
+        color: #ffffff;
         transform: translateY(10%);
     }
 }

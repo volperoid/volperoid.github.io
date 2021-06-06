@@ -1,6 +1,4 @@
-html, body {
-    height: 100vh;
-}
+
 .catalogue {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -8,7 +6,8 @@ html, body {
     gap: 5px;
     align-items: center;
     justify-items: center;
-
+    width: 100vw;
+    height: 100vh;
     padding: 0 48px;
 }
 .item-card {
