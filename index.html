@@ -194,6 +194,10 @@
                 target.style.flex = 1;
             }
         }
+        function dimIt(target) {
+            target.style.filter = 'sepia()';
+     
+        }
         nodeList.forEach(element => {
             element.addEventListener('click', () => {flexIt(element)});
             element.addEventListener('hover', () => {dimIt(element)});
