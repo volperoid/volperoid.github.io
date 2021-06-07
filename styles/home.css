@@ -266,7 +266,7 @@ header {
 
 /*******************************************/
 
-#arrow {
+#nav-arrow {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -277,7 +277,7 @@ header {
     position: fixed;
     z-index: 9;
 }
-#arrow a {
+#nav-arrow a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -285,7 +285,7 @@ header {
     width: fit-content;
     height: fit-content;
 }
-#arrow i {
+#nav-arrow i {
     animation: hop 850ms infinite alternate ease-in-out;
 }
 @keyframes hop {
@@ -303,53 +303,70 @@ header {
 
 /*---------------------------------------------------------------------------*/
 
-#drawer {
+#widget-0 {
     position: fixed;
     right: 0;
     bottom: 1vh;
-    width: min-content;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    background-color: #121212cc;
+    transform: translateX(50%);
     transition: all 350ms ease-in-out;
-    transform: translateX(70%);
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 60px;
+    background-color: #121212;
+    overflow: clip;
+
+    /** Variant A
+
+    border-radius: 56px 28px 28px 56px;*/
+
+    /** Variant B */
+
+    border-radius: 56px 0 0 56px;
 }
-#drawer:hover {
+#widget-0:hover {
     transform: translateX(0);
 }
-.fa-caret-left {
-    transition: transform 350ms ease-in-out;
-}
-#drawer:hover .fa-caret-left {
-    transform: rotateZ(180deg);
-    transform-origin: center;
-}
-#marker {
-}
-#marker .fa-caret-left {
-    color: crimson;
-    background-color: #dc143c00;
-}
 #toggle {
+    position: relative;
+    top: 50%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
     background-color: #121212;
-    border-top-left-radius: 100%;
-    border-bottom-left-radius: 100%;
+    border-radius: 28px;
+    padding: 8px;
+    transition: all 350ms ease-in-out;
 }
-#drawer:hover #toggle {
-
+#arrow {
+    background: #121212;
+    color: crimson;
+    font-size: 96px;
+    border-radius: 100%;
+    transition: all 350ms ease-in-out;
 }
-#toggle button {
-    width: 100%;
-    height: 100%;
+#widget-0:hover #arrow {
+    transform: rotateZ(180deg);
 }
-#toggle i {
-    background-color: #121212;
-    color: #484848;
+#light, #dark {
+    background: #242424;
+    border-radius: 100%;
+    padding: 8px;
 }
-#toggle:hover i {
+#light:hover, #dark:hover {
+    background-color: #484848;
+}
+#light {
     color: lightgoldenrodyellow;
+}
+#dark {
+    color: lightskyblue;
+}
+.icon {
+    font-size: 28px;
+    text-align: center;
+    vertical-align: middle;
+
 }

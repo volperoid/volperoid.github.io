@@ -22,84 +22,85 @@
             position: relative;
             width: 100vw;
             height: 100vh;
-            background-color: sandybrown;
+            background-color: salmon;
             display: flex;
             align-items: center;
             justify-content: center;
             justify-items: center;
         }
-        #dark, #light {
-            font-size: 28.5px;
+        .icon {
+            font-size: 28px;
+            text-align: center;
+            vertical-align: middle;
+
+        }
+        #light, #dark {
+            background: #242424;
+            border-radius: 100%;
+            padding: 8px;
+        }
+        #light {
+            color: lightgoldenrodyellow;
+        }
+        #dark {
+            color: lightskyblue;
         }
         #arrow {
-            font-size: 48px;
-        }
-        #widget {
-            position: fixed;
-            bottom: 50%;
-            right: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px;
-            background-color: #121212;
-            border-radius: 12px 0 0 12px; /* 12, 16, 24 */
-        }
-        #indicator {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        #clip-mask {
-            position: relative;
-            overflow: clip;
+            background: #121212;
+            color: crimson;
+            font-size: 96px;
+            border-radius: 100%;
+            transition: 850s;
         }
         #toggle {
-            position: fixed;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
+            top: 50%;
             display: grid;
             grid-template-rows: 1fr 1fr;
+            gap: 16px;
+            align-items: center;
+            justify-items: center;
+            background-color: #121212;
+            border-radius: 28px;
+            padding: 8px;
+            transition: all 350ms ease-in-out;
         }
-        #widget button, #widget span {
-            background-color: transparent;
-        }
-        #toggle button {
-            padding: 6px;
+        #widget-0 {
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-        #indicator span {
-            color: crimson;
-        }
-        #toggle span {
-            color: lightgoldenrodyellow;
+            height: 60px;
+            background-color: #121212;
+            overflow: clip;
+
+            /** Variant A
+
+            border-radius: 56px 28px 28px 56px;*/
+
+            /** Variant B */
+
+            border-radius: 56px 0 0 56px;
         }
     </style>
 
     <title>Document</title>
 </head>
 <body>
-    <div id="widget">
-        <div id="indicator">
-            <span id="arrow" class="material-icons-outlined">
-                arrow_left
-            </span>
-        </div>
-        <div id="clip-mask">
-            <div id="toggle">
-                <button>
-                    <span id="dark" class="material-icons-outlined">
-                        dark_mode
-                    </span>
-                </button>
-                <button>
-                    <span id="light" class="material-icons-outlined">
-                        light_mode
-                    </span>
-                </button>
-            </div>
+    <div id="widget-0">
+        <span id="arrow" class="icon material-icons-outlined">
+            arrow_left
+        </span>
+        <div id="toggle">
+            <button id="light">
+                <span class="icon material-icons-outlined">
+                    light_mode
+                </span>
+            </button>
+            <button id="dark">
+                <span class="icon material-icons-outlined">
+                    dark_mode
+                </span>
+            </button>
         </div>
     </div>
 </body>
