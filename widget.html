@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            border: none;
+            outline: none;
+            cursor: default;
+        }
+        html, body {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: sandybrown;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-items: center;
+        }
+        #dark, #light {
+            font-size: 28.5px;
+        }
+        #arrow {
+            font-size: 48px;
+        }
+        #widget {
+            position: fixed;
+            bottom: 50%;
+            right: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            background-color: #121212;
+            border-radius: 12px 0 0 12px; /* 12, 16, 24 */
+        }
+        #indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #clip-mask {
+            position: relative;
+            overflow: clip;
+        }
+        #toggle {
+            position: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+        #widget button, #widget span {
+            background-color: transparent;
+        }
+        #toggle button {
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #indicator span {
+            color: crimson;
+        }
+        #toggle span {
+            color: lightgoldenrodyellow;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="widget">
+        <div id="indicator">
+            <span id="arrow" class="material-icons-outlined">
+                arrow_left
+            </span>
+        </div>
+        <div id="clip-mask">
+            <div id="toggle">
+                <button>
+                    <span id="dark" class="material-icons-outlined">
+                        dark_mode
+                    </span>
+                </button>
+                <button>
+                    <span id="light" class="material-icons-outlined">
+                        light_mode
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

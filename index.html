@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Dosis:wght@200&family=Poiret+One&family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/classes.css">
@@ -22,6 +22,9 @@
     <title>Document</title>
 </head>
 <body>
+
+    <!-- * Front Cover -->
+
     <header>
         <div id="container">
             <div id="banner">
@@ -73,13 +76,25 @@
                     </div>
                 </div>
                 <div id="author">
-                    <span>BY <span class="crimson-fg">&bull;</span> <a id="visit" href="https://github.com/volperoid">Volperoid</a></span>
+                    <span>
+                        <a id="visit" href="https://github.com/volperoid">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <span class="crimson-fg">&bull;</span>
+                        By Volperoid
+                    </span>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- * Categories -->
+
     <main>
-        <div id="categories">
+
+        <!-- * Title -->
+
+        <div id="section-0" class="section">
             <div class="dot-box">
                 <div class="dots-3">
                     <div class="dot"></div>
@@ -98,6 +113,9 @@
                 DISCOVER OUR FINE SELECTION
             </h1>
         </div>
+
+        <!-- * Section 0 -->
+
         <div class="accordion">
             <div id="slide0" class="illustration">
                 <div class="wrapper">
@@ -165,57 +183,53 @@
                 </div>
             </div>
         </div>
+
+        <!-- * Section 1 -->
+
+        <div id="section-1" class="section">
+            <div class="dot-box">
+                <div class="dots-3">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="dots-2">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <div class="dots-1">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <h1>
+                DISCOVER OUR FINE SELECTION
+            </h1>
+        </div>
     </main>
+
+    <!-- * Navigator -->
+
     <div id="arrow">
-        <a href="#categories">
+        <a href="#section-0">
+            <!--
             <span class="material-icons-round">
                 expand_more
             </span>
+            -->
+            <i class="fas fa-angle-down fa-3x"></i>
         </a>
     </div>
-    <script>
-        const nodeList = document.querySelectorAll('.illustration');
-        function flexIt(target){
-            let selectorString = "#"+target.id+" .wrapper";
-            if (target.style.flex !== 10) {
-                target.style.flex = 10;
-                for (let i = 0; i < nodeList.length; i++) {
-                    if ('slide'+i !== target.id) {
-                        document.querySelector('#slide'+i).style.flex = 1;
-                        document.querySelector('#slide'+i+' '+'.wrapper').style.transform = 'translateX(-100%)';
-                        document.querySelector('#slide'+i+' '+'.wrapper').style.opacity = 0;
-                        document.querySelector('#slide'+i+' '+'.wrapper').style.backgroundColor = 'transparent';
-                    }
-                }
-                document.querySelector(selectorString).style.transform = 'translateX(0)';
-                document.querySelector(selectorString).style.opacity = 1;
-                document.querySelector(selectorString).style.backgroundColor = '#ffffffcc';
-            } else {
-                target.style.flex = 1;
-            }
-        }
-        function dimIt(target) {
-            target.style.filter = 'sepia()';
-     
-        }
-        nodeList.forEach(element => {
-            element.addEventListener('click', () => {flexIt(element)});
-            element.addEventListener('hover', () => {dimIt(element)});
-        });
 
+    <!-- * Widgets -->
 
-
-        /*
-        function dimIt(target){
-            target.style.filter = 'sepia(75%)';
-        }
-        document.querySelector('#slide0').addEventListener('hover', dimIt(document.querySelector('#slide0')));
-        document.querySelector('#slide1').addEventListener('hover', dimIt(document.querySelector('#slide1')));
-        document.querySelector('#slide2').addEventListener('hover', dimIt(document.querySelector('#slide2')));
-        document.querySelector('#slide3').addEventListener('hover', dimIt(document.querySelector('#slide3')));
-        document.querySelector('#slide4').addEventListener('hover', dimIt(document.querySelector('#slide4')));
-        */
-
-    </script>
+    <div id="drawer">
+        <div id="marker">
+            <i id="caret" class="fa fas fa-caret-left fa-3x"></i>
+        </div>
+        <div id="toggle">
+            <button><i class="fa fas fa-moon fa-3x"></i></button>
+        </div>
+    </div>
+    <script src="js/webworks.js"></script>
 </body>
 </html>
