@@ -121,7 +121,6 @@ header {
     padding: 24px 48px;
     background-color: #121212cc;
     color: white;
-    border-top: 1px solid crimson;
 }
 .dot-box {
     display: grid;
