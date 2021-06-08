@@ -175,7 +175,7 @@ header {
     height: 85vh;
     font-family: 'Poiret One';
 }
-.illustration {
+.slide {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -189,22 +189,22 @@ header {
     flex: 1;
     overflow: clip;
 }
-#slide0 {
+#slide-0 {
     background-image: url("../media/car-18.jpg");
 }
-#slide1 {
+#slide-1 {
     background-image: url("../media/continental.jpg");
 }
-#slide2 {
+#slide-2 {
     background-image: url("../media/performance.jpg");
 }
-#slide3 {
+#slide-3 {
     background-image: url("../media/oldtimer.jpg");
 }
-#slide4 {
+#slide-4 {
     background-image: url("../media/components.jpg");
 }
-.wrapper {
+.description {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
@@ -212,7 +212,6 @@ header {
     justify-content: center;
     width: 33.33%;
     height: 100%;
-    background-color: transparent;
     color: #121212;
     opacity: 0;
     overflow-x: hidden;
@@ -306,6 +305,7 @@ header {
     position: fixed;
     right: 0;
     bottom: 1vh;
+    z-index: 9;
     transform: translateX(50%);
     transition: all 350ms ease-in-out;
     display: flex;
