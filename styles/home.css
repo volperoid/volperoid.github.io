@@ -28,7 +28,6 @@ header {
     width: fit-content;
     height: 100%;
     background-color: #121212cc;
-    font-family: 'Poiret One';
 }
 #logo {
     display: grid;
@@ -168,7 +167,6 @@ header {
     justify-content: center;
     overflow: clip;
     height: 85vh;
-    font-family: 'Poiret One';
 }
 .slide {
     z-index: 0;
