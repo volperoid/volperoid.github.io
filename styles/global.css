@@ -1,4 +1,7 @@
-@import url(../fonts/PoiretOne-Regular.ttf);
+@font-face {
+    font-family: 'Poiret One';
+    src: url(../fonts/PoiretOne-Regular.ttf);
+}
 html, body {
     width: 100vw;
     font-family: 'Poiret One', 'Dosis', 'Varela Round', Arial, Helvetica, sans-serif;
