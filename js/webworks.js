@@ -53,24 +53,24 @@ function openSlide(target){
 function addFocusEffects(target) {
     target.style.boxShadow = '0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.20)';
     if (target.style.flex !== '10 1 0%') {
-        target.style.zIndex = '2';
         target.style.transform = 'scale(1.2)';
+        target.style.flex = '1.25';
+        target.style.zIndex = '2';
         for (let i = 0; i < nodeList_slide; i++) {
             if ('slide' + '-' + i !== target.id) {
-                document.querySelector('#slide' + '-' + i).style.filter = 'blur(50%)';
+                document.querySelector('#slide' + '-' + i).style.filter = 'blur(4px)';
             }
         }
     }
 }
 
 function removeFocusEffects(target) {
-    target.style.boxShadow = 'none';
     target.style.zIndex = '0';
+    target.style.boxShadow = 'none';
     target.style.transform = 'scale(1)';
     nodeList_slide.forEach(element => {
         element.style.filter = 'blur(0)';
     });
-
 }
 
 function activeTheme(theme) {
