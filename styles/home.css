@@ -179,7 +179,7 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: flex 1s ease-in-out, transform 350ms ease-in-out;
+    transition: flex 1s ease-in-out, transform 350ms ease-in-out, filter 0.75s;
     transform-origin: center;
     flex: 1;
     overflow: clip;

@@ -56,16 +56,19 @@ function addFocusEffects(target) {
         target.style.transform = 'scale(1.2)';
         target.style.flex = '1.25';
         target.style.zIndex = '2';
-        for (let i = 0; i < nodeList_slide; i++) {
-            if ('slide' + '-' + i !== target.id) {
-                document.querySelector('#slide' + '-' + i).style.filter = 'blur(4px)';
+        nodeList_slide.forEach(element => {
+            if (element.id !== target.id) {
+                element.style.filter = 'blur(4px)';
             }
-        }
+        });
     }
 }
 
 function removeFocusEffects(target) {
-    target.style.zIndex = '0';
+    target.addEventListener('animationend', () => {
+        target.style.zIndex = '0';
+        console.log('test');
+    });
     target.style.boxShadow = 'none';
     target.style.transform = 'scale(1)';
     target.style.flex = '1 1 0%';
