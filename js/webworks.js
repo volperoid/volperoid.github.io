@@ -23,6 +23,7 @@ function closePrevSlide (activeSlide) {
         }
     }
 }
+
 function closeCurrentSlide (activeSlide) {
     for (let i = 0; i < nodeList_slide.length; i++) {
         if ('slide'+'-'+i == activeSlide.id) {
@@ -33,10 +34,12 @@ function closeCurrentSlide (activeSlide) {
         }
     }
 }
-function flexIt(target){
+
+function openSlide(target){
     let selectorString = "#"+target.id+" "+".description";
     if (target.style.flex !== '10 1 0%') {
         target.style.flex = '10 1 0%';
+        target.style.transform = 'scale(1)';
         document.querySelector(selectorString).style.transform = 'translateX(0)';
         document.querySelector(selectorString).style.opacity = 1;
         document.querySelector(selectorString).style.backgroundColor = '#ffffffcc';
@@ -49,12 +52,12 @@ function flexIt(target){
 
 function addFocusEffects(target) {
     target.style.boxShadow = '0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.20)';
-    target.style.zIndex = '9';
     if (target.style.flex !== '10 1 0%') {
-        for (let i = 0; i < 5; i++) {
-            if ('slide'+i !== target.id) {
-                console.log('2');
-                document.querySelector('#slide'+i).style.filter = 'blur(50%)';
+        target.style.zIndex = '2';
+        target.style.transform = 'scale(1.2)';
+        for (let i = 0; i < nodeList_slide; i++) {
+            if ('slide' + '-' + i !== target.id) {
+                document.querySelector('#slide' + '-' + i).style.filter = 'blur(50%)';
             }
         }
     }
@@ -62,7 +65,8 @@ function addFocusEffects(target) {
 
 function removeFocusEffects(target) {
     target.style.boxShadow = 'none';
-    target.style.zIndex = '1';
+    target.style.zIndex = '0';
+    target.style.transform = 'scale(1)';
     nodeList_slide.forEach(element => {
         element.style.filter = 'blur(0)';
     });
@@ -121,7 +125,7 @@ function scrollToSection () {
 // * load event listeners //
 
 nodeList_slide.forEach(element => {
-    element.addEventListener('click', () => {flexIt(element)});
+    element.addEventListener('click', () => {openSlide(element)});
     element.addEventListener('mouseover', () => {addFocusEffects(element)});
     element.addEventListener('mouseleave', () => {removeFocusEffects(element)});
 });

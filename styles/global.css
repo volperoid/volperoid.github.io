@@ -4,6 +4,7 @@ html, body {
     font-family: 'Dosis', 'Varela Round', Arial, Helvetica, sans-serif;
     scrollbar-width: none;
     scroll-behavior: smooth;
+    z-index: 0;
 }
 ::-webkit-scrollbar {
     display: none;

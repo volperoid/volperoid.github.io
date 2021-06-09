@@ -1,11 +1,6 @@
 body {
     background: #121212 center no-repeat fixed;
 }
-.separator {
-    width: 100%;
-    height: 5vh;
-    background-color: #121212;
-}
 header {
     display: flex;
     align-items: center;
@@ -185,7 +180,8 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: flex 1s ease-in-out;
+    transition: flex 1s ease-in-out, transform 350ms ease-in-out;
+    transform-origin: center;
     flex: 1;
     overflow: clip;
 }
