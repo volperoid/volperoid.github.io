@@ -59,6 +59,7 @@ function addFocusEffects(target) {
         nodeList_slide.forEach(element => {
             if (element.id !== target.id) {
                 element.style.filter = 'blur(4px)';
+                element.style.zIndex = '0';
             }
         });
     }
@@ -72,10 +73,10 @@ function removeFocusEffects(target) {
     target.style.boxShadow = 'none';
     target.style.transform = 'scale(1)';
     target.style.flex = '1 1 0%';
-    closeCurrentSlide(target);
     nodeList_slide.forEach(element => {
         element.style.filter = 'blur(0)';
     });
+    closeCurrentSlide(target);
 }
 
 function activeTheme(theme) {
