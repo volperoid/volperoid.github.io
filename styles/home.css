@@ -93,20 +93,26 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-top: 48px;
     text-align: center;
     vertical-align: middle;
-    color: hsla(0, 0%, 100%, 0.50);
+    color: hsla(0, 0%, 100%, 0.5);
     font-size: 24px;
     padding: 10px 20px;
 }
-#visit {
-    text-decoration: none;
-    color: hsla(0, 0%, 100%, 0.50);
+#credits a {
+    color: hsla(0, 0%, 100%, 0.5);
 }
-#visit:hover {
-    color: white;
+#gitName {
+    font-family: 'Poiret One';
+}
+#dot {
+    color: crimson;
+}
+#smallText {
+    font-size: 12px;
+    padding-bottom: 8px;
 }
 .heading {
     display: flex;

@@ -87,8 +87,8 @@ function activeTheme(theme) {
         });
         document.querySelector('#banner').style.backgroundColor = '#121212cc';
         document.querySelector('header').style.color = 'white';
-        document.querySelector('#credits').style.color = 'hsla(0, 0%, 100%, 0.50)';
-        document.querySelector('#visit').style.color = 'hsla(0, 0%, 100%, 0.50)';
+        document.querySelector('#credits').style.color = 'hsla(0, 0%, 100%, 0.5)';
+        document.querySelector('#author a').style.color = 'hsla(0, 0%, 100%, 0.5)';
         document.querySelector('#slide-3 .description').style.backgroundColor = '#121212cc';
     } else if (theme == 'light') {
         nodeList_heading.forEach(element => {
@@ -98,7 +98,7 @@ function activeTheme(theme) {
         document.querySelector('#banner').style.backgroundColor = '#ffffffcc';
         document.querySelector('header').style.color = '#121212';
         document.querySelector('#credits').style.color = 'hsla(0, 0%, 7%, 0.5)';
-        document.querySelector('#visit').style.color = 'hsla(0, 0%, 7%, 0.5)';
+        document.querySelector('#author a').style.color = 'hsla(0, 0%, 7%, 0.5)';
         document.querySelector('#slide-3 .description').style.backgroundColor = '#ffffffcc';
     }
 }
