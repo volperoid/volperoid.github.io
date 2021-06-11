@@ -8,7 +8,7 @@ console.log('JavaScript Event Log:');
 
 const nodeList_slide = document.querySelectorAll('.slide');
 const nodeList_description = document.querySelectorAll('.description');
-const nodeList_section = document.querySelectorAll('.section');
+const nodeList_heading = document.querySelectorAll('.heading');
 
 
 // * functions //
@@ -81,23 +81,23 @@ function removeFocusEffects(target) {
 
 function activeTheme(theme) {
     if (theme == 'dark') {
-        nodeList_section.forEach(element => {
+        nodeList_heading.forEach(element => {
             element.style.backgroundColor = '#121212cc';
             element.style.color = 'white';
         });
         document.querySelector('#banner').style.backgroundColor = '#121212cc';
         document.querySelector('header').style.color = 'white';
-        document.querySelector('#author').style.color = 'hsla(0, 0%, 100%, 0.50)';
+        document.querySelector('#credits').style.color = 'hsla(0, 0%, 100%, 0.50)';
         document.querySelector('#visit').style.color = 'hsla(0, 0%, 100%, 0.50)';
         document.querySelector('#slide-3 .description').style.backgroundColor = '#121212cc';
     } else if (theme == 'light') {
-        nodeList_section.forEach(element => {
+        nodeList_heading.forEach(element => {
             element.style.backgroundColor = 'white';
             element.style.color = '#121212';
         });
         document.querySelector('#banner').style.backgroundColor = '#ffffffcc';
         document.querySelector('header').style.color = '#121212';
-        document.querySelector('#author').style.color = 'hsla(0, 0%, 7%, 0.5)';
+        document.querySelector('#credits').style.color = 'hsla(0, 0%, 7%, 0.5)';
         document.querySelector('#visit').style.color = 'hsla(0, 0%, 7%, 0.5)';
         document.querySelector('#slide-3 .description').style.backgroundColor = '#ffffffcc';
     }
@@ -117,11 +117,11 @@ function slideIt (targetButton) {
     }
 }
 
-function scrollToSection () {
+function scrollToHeading () {
     console.log('function entered');
     for (let i = 0; i < 2; i++) {
         if (i < 1) {
-            document.querySelector('section'+'-'+i).scrollIntoView();
+            document.querySelector('heading'+'-'+i).scrollIntoView();
         } else if (i = 1) {
             document.querySelector('body').scrollIntoView();
         };
@@ -137,4 +137,4 @@ nodeList_slide.forEach(element => {
 });
 document.querySelector('#light').addEventListener('click', () => {slideIt(1)});
 document.querySelector('#dark').addEventListener('click', () => {slideIt(0)});
-document.querySelector('#nav-arrow').addEventListener('click', scrollToSection);
+document.querySelector('#nav-arrow').addEventListener('click', scrollToHeading);
