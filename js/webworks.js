@@ -81,25 +81,24 @@ function removeFocusEffects(target) {
 
 function activeTheme(theme) {
     if (theme == 'dark') {
-        nodeList_heading.forEach(element => {
-            element.style.backgroundColor = '#121212cc';
-            element.style.color = 'white';
-        });
+
         document.querySelector('#banner').style.backgroundColor = '#121212cc';
         document.querySelector('header').style.color = 'white';
         document.querySelector('#credits').style.color = 'hsla(0, 0%, 100%, 0.5)';
         document.querySelector('#author a').style.color = 'hsla(0, 0%, 100%, 0.5)';
         document.querySelector('#slide-3 .description').style.backgroundColor = '#121212cc';
+        document.querySelector('body').style.backgroundColor = '#121212';
+        document.querySelector('body').style.color = '#ffffff';
+
     } else if (theme == 'light') {
-        nodeList_heading.forEach(element => {
-            element.style.backgroundColor = 'white';
-            element.style.color = '#121212';
-        });
+
         document.querySelector('#banner').style.backgroundColor = '#ffffffcc';
         document.querySelector('header').style.color = '#121212';
         document.querySelector('#credits').style.color = 'hsla(0, 0%, 7%, 0.5)';
         document.querySelector('#author a').style.color = 'hsla(0, 0%, 7%, 0.5)';
         document.querySelector('#slide-3 .description').style.backgroundColor = '#ffffffcc';
+        document.querySelector('body').style.backgroundColor = '#ffffff';
+        document.querySelector('body').style.color = '#121212';
     }
 }
 
@@ -118,14 +117,7 @@ function slideIt (targetButton) {
 }
 
 function scrollToHeading () {
-    console.log('function entered');
-    for (let i = 0; i < 2; i++) {
-        if (i < 1) {
-            document.querySelector('heading'+'-'+i).scrollIntoView();
-        } else if (i = 1) {
-            document.querySelector('body').scrollIntoView();
-        };
-    }
+
 }
 
 // * load event listeners //
@@ -137,4 +129,4 @@ nodeList_slide.forEach(element => {
 });
 document.querySelector('#light').addEventListener('click', () => {slideIt(1)});
 document.querySelector('#dark').addEventListener('click', () => {slideIt(0)});
-document.querySelector('#nav-arrow').addEventListener('click', scrollToHeading);
+document.querySelector('#nav-arrow a').addEventListener('click', scrollToHeading);

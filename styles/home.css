@@ -123,10 +123,9 @@ header {
     height: 30vh;
     font-size: 100%;
     padding: 24px 48px;
-    background-color: #121212cc;
     color: white;
 }
-#heading-0, #heading-1 {
+#heading-border {
     height: 33.33%;
     padding: 1em;
     font-size: 48px;
@@ -232,6 +231,16 @@ header {
 .link-btn:hover {
     background-color: #121212;
     color: white;
+}
+
+/*******************************************/
+
+#brands {
+    height: 70vh;
+    display: grid;
+    grid-template:
+    "a b c d e"
+    "f g h i j";
 }
 
 /*******************************************/
