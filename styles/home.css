@@ -138,6 +138,7 @@ header {
 /**************************************************/
 
 .accordion {
+    position: relative;
     display: flex;
     align-items: center;
     justify-items: center;
@@ -146,7 +147,7 @@ header {
     height: 70vh;
 }
 .slide {
-    z-index: 0;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -160,6 +161,21 @@ header {
     transform-origin: center;
     flex: 1;
     overflow: clip;
+}
+.ui-hint {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212cc;
+    width: 100%;
+    height: 100%;
+}
+.ui-hint span {
+    font-size: 48px;
+    font-variant: small-caps;
+    color: #ffffff;
 }
 #slide-0 {
     background-image: url("../media/car-18.jpg");
@@ -177,6 +193,7 @@ header {
     background-image: url("../media/components.jpg");
 }
 .description {
+    position: relative;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     align-items: center;
@@ -209,7 +226,7 @@ header {
     height: 100%;
 }
 .info p {
-    width: 70%;
+    width: 15vw;
 }
 .explore {
     width: fit-content;
@@ -231,6 +248,16 @@ header {
 .link-btn:hover {
     background-color: #121212;
     color: white;
+}
+.close-btn {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    font-size: 30px;
+    color: #121212cc;
+}
+.close-btn:hover {
+    color: crimson;
 }
 
 /*******************************************/
