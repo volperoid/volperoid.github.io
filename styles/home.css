@@ -168,7 +168,6 @@ h2 {
     height: 70vh;
 }
 .slide {
-    margin: -1px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -185,18 +184,23 @@ h2 {
 }
 #slide-0 {
     background-image: url("../media/car-18.jpg");
+    margin: -1px -1px -1px 0;
 }
 #slide-1 {
     background-image: url("../media/continental.jpg");
+    margin: -1px -1px -1px -1px;
 }
 #slide-2 {
     background-image: url("../media/performance.jpg");
+    margin: -1px -1px -1px -1px;
 }
 #slide-3 {
     background-image: url("../media/oldtimer.jpg");
+    margin: -1px -1px -1px -1px;
 }
 #slide-4 {
     background-image: url("../media/components.jpg");
+    margin: -1px 0 -1px -1px;
 }
 .ui-hint {
     visibility: hidden;
