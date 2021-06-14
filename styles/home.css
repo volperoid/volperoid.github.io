@@ -168,6 +168,7 @@ h2 {
     height: 70vh;
 }
 .slide {
+    margin: -1px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
