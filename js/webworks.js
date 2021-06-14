@@ -6,16 +6,12 @@ console.log('JavaScript Event Log:');
 
 // * global declarations //
 
-const nodeList_slide = document.querySelectorAll('.slide');
-const nodeList_description = document.querySelectorAll('.description');
-const nodeList_heading = document.querySelectorAll('.heading');
 let themeLabel = 'dark';
-
 
 // * functions //
 
 function closePrevSlide (activeSlide) {
-    for (let i = 0; i < nodeList_slide.length; i++) {
+    for (let i = 0; i < document.querySelectorAll('.slide').length; i++) {
         if ('slide'+'-'+i !== activeSlide.id) {
             document.querySelector('#slide'+'-'+i).style.flex = 1;
             document.querySelector('#slide'+'-'+i+' '+'.description').style.transform = 'translateX(-100%)';
@@ -25,7 +21,7 @@ function closePrevSlide (activeSlide) {
 }
 
 function closeCurrentSlide (activeSlide) {
-    for (let i = 0; i < nodeList_slide.length; i++) {
+    for (let i = 0; i < document.querySelectorAll('.slide').length; i++) {
         if ('slide'+'-'+i == activeSlide.id) {
             document.querySelector('#slide'+'-'+i).style.flex = 1;
             document.querySelector('#slide'+'-'+i+' '+'.description').style.transform = 'translateX(-100%)';
@@ -49,7 +45,7 @@ function openSlide(target){
         closeCurrentSlide(target);
         target.style.zIndex = 0;
     }
-    nodeList_slide.forEach(element => {
+    document.querySelectorAll('.slide').forEach(element => {
         if (element.id !== target.id) {
             element.style.zIndex = 0;
         }
@@ -62,7 +58,7 @@ function addFocusEffects(target) {
         document.querySelector('#' + target.id + ' ' + '.ui-hint').style.visibility = 'visible';
         target.style.transform = 'scale(1.1)';
         target.style.zIndex = 1;
-        nodeList_slide.forEach(element => {
+        document.querySelectorAll('.slide').forEach(element => {
             if (element.id !== target.id) {
                 element.style.zIndex = 0;
             }
@@ -76,7 +72,7 @@ function removeFocusEffects(target) {
         target.style.transform = 'scale(1)';
         target.style.boxShadow = 'none';
     }
-    nodeList_slide.forEach(element => {
+    document.querySelectorAll('.slide').forEach(element => {
     });
 }
 
@@ -138,7 +134,7 @@ function scrollToHeading () {
 
 // * load event listeners //
 
-nodeList_slide.forEach(element => {
+document.querySelectorAll('.slide').forEach(element => {
     element.addEventListener('click', () => {openSlide(element)});
     element.addEventListener('mouseenter', () => {addFocusEffects(element)});
     element.addEventListener('mouseleave', () => {removeFocusEffects(element)});
@@ -150,6 +146,22 @@ document.querySelector('#credits').addEventListener('mouseover', () => {
     document.querySelector('#smallText').style.color = '#crimson';
     document.querySelector('#largeText').style.color = '#crimson';
     document.querySelector('#largeText i').style.color = '#crimson';
+});
+document.querySelectorAll('.brand').forEach(element => {
+    element.addEventListener('mousedown', () => {
+        if (element.style.backgroundSize == '40%') {
+            element.style.backgroundSize = '35%';
+        } else if (element.style.backgroundSize == '50%') {
+            element.style.backgroundSize = '45%';
+        }
+    });
+    element.addEventListener('mouseup', () => {
+        if (element.style.backgroundSize == '35%') {
+            element.style.backgroundSize = '40%';
+        } else if (element.style.backgroundSize == '45%') {
+            element.style.backgroundSize = '50%';
+        }
+    });
 });
 
 // * run at visit //
