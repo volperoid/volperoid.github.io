@@ -4,7 +4,7 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     background-image: url("../media/car-8.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -13,21 +13,14 @@ header {
     width: 100%;
     height: 100vh;
 }
-#container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 75%;
-    height: 100%;
-}
 #banner {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: fit-content;
     height: 100%;
-    background-color: #121212cc;
+    margin-right: 10%;
 }
 #logo {
     display: grid;
@@ -37,6 +30,7 @@ header {
     grid-template-rows: repeat(3, 118px);
     gap: 8px;
     padding: 48px;
+    font-family: 'Orbitron';
     font-size: 48px;
 }
 #logo div {
@@ -72,7 +66,7 @@ header {
     opacity: 100%;
 }
 #glyph-8 {
-    border: 1px solid crimson;
+    border: 2px solid crimson;
     color: crimson;
     background-color: transparent;
     animation: glow 1.5s infinite alternate ease-in;
@@ -90,64 +84,92 @@ header {
     }
 }
 #credits {
-    display: flex;
+    display: flex block;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     margin-top: 48px;
-    text-align: center;
-    vertical-align: middle;
-    color: hsla(0, 0%, 100%, 0.5);
-    font-size: 24px;
-    padding: 10px 20px;
-}
-#credits a {
-    color: hsla(0, 0%, 100%, 0.5);
-}
-#gitName {
-    font-family: 'Poiret One';
-}
-#dot {
-    color: crimson;
+    font-family: 'Varela';
 }
 #smallText {
-    font-size: 12px;
-    padding-bottom: 8px;
+    width: 100%;
+    text-align: right;
+    font-size: 14px;
+}
+#largeText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-variant: small-caps;
+}
+#largeText i {
+    margin-right: 8px;
+}
+#nav-arrow {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    bottom: 1vh;
+    position: absolute;
+    bottom: 1%;
+    z-index: 9;
+}
+#nav-arrow a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: fit-content;
+    height: fit-content;
+}
+#nav-arrow i {
+    animation: hop 850ms infinite alternate ease-in-out;
+}
+@keyframes hop {
+    from {
+        color: #ffffff00;
+        transform: translateY(-10%);
+        text-shadow: none;
+    }
+    to {
+        color: #ffffff;
+        transform: translateY(10%);
+        text-shadow: 0 0 8px white;
+    }
 }
 .heading {
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 30vh;
-    font-size: 100%;
-    padding: 24px 48px;
     color: white;
+    width: 100%;
+    padding: 24px 48px;
 }
-#heading-border {
-    height: 33.33%;
-    padding: 1em;
-    font-size: 48px;
+#heading-0 {
+    height: 30vh;
+}
+h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 3px solid crimson;
+    font-family: 'Orbitron';
+    font-weight: 100;
+    font-size: 95px;
+    padding: 0 0 0 32px;
+    border-left: 4px solid crimson;
 }
-
-/**************************************************/
-
-.accordion {
-    position: relative;
+#section-0 {
     display: flex;
     align-items: center;
     justify-items: center;
     justify-content: center;
-    overflow: clip;
-    height: 70vh;
+    height: 100vh;
 }
 .slide {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -157,25 +179,10 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    transition: flex 1s ease-in-out, transform 350ms ease-in-out, filter 0.75s;
+    transition: flex 1.5s ease-in-out, transform 500ms ease-in-out;
     transform-origin: center;
     flex: 1;
     overflow: clip;
-}
-.ui-hint {
-    visibility: hidden;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #121212cc;
-    width: 100%;
-    height: 100%;
-}
-.ui-hint span {
-    font-size: 48px;
-    font-variant: small-caps;
-    color: #ffffff;
 }
 #slide-0 {
     background-image: url("../media/car-18.jpg");
@@ -192,6 +199,21 @@ header {
 #slide-4 {
     background-image: url("../media/components.jpg");
 }
+.ui-hint {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212cc;
+    width: 100%;
+    height: 100%;
+}
+.ui-hint span {
+    font-size: 48px;
+    font-variant: small-caps;
+    color: #ffffff;
+}
 .description {
     position: relative;
     display: grid;
@@ -201,7 +223,6 @@ header {
     justify-content: center;
     width: 33.33%;
     height: 100%;
-    color: #121212;
     opacity: 0;
     overflow-x: hidden;
     transition: all 1s;
@@ -259,56 +280,98 @@ header {
 .close-btn:hover {
     color: crimson;
 }
-
-/*******************************************/
-
+#heading-1 {
+    height: 30vh;
+}
+#section-1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("../media/car-15.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+#scrollFrame {
+    height: 100%;
+    margin-left: 10%;
+    background-color: #ffffffbf;
+    overflow-x: clip;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    box-shadow: 0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.20);
+}
 #brands {
-    height: 70vh;
+    height: 400vh;
+    width: 25vw;
     display: grid;
-    grid-template:
-    "a b c d e"
-    "f g h i j";
+    grid-template-rows: repeat(auto, 1fr);
 }
-
-/*******************************************/
-
-#nav-arrow {
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100px;
-    bottom: 1vh;
-    position: fixed;
-    z-index: 9;
+.brand {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30%;
 }
-#nav-arrow a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    width: fit-content;
-    height: fit-content;
+.brand:hover {
+    background-color: #e6e6e6;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
 }
-#nav-arrow i {
-    animation: hop 850ms infinite alternate ease-in-out;
+#volkswagen {
+    background-image: url("../media/Volkswagen-logo.png");
 }
-@keyframes hop {
-    from {
-        color: #ffffff00;
-        transform: translateY(-10%);
-        text-shadow: none;
-    }
-    to {
-        color: #ffffff;
-        transform: translateY(10%);
-        text-shadow: 0 0 8px white;
-    }
+#ford {
+    background-image: url("../media/ford-logo.png");
+    background-size: 40%;
 }
-
-/*---------------------------------------------------------------------------*/
-
+#porsche {
+    background-image: url("../media/porsche-logo.png");
+    background-size: 50%;
+}
+#jeep {
+    background-image: url("../media/Jeep-logo.png");
+    background-size: 40%;
+}
+#nissan {
+    background-image: url("../media/nissan-logo.png");
+}
+#bugatti {
+    background-image: url("../media/Bugatti-logo-1024x768.png");
+    background-size: 40%;
+}
+#mercedesBenz {
+    background-image: url("../media/Mercedes-Benz-logo-2011-1920x1080.png");
+    background-size: 50%;
+}
+#lincoln {
+    background-image: url("../media/Lincoln-logo-2019-1920x1080.png");
+    background-size: 50%;
+}
+#rollsRoyce {
+    background-image: url("../media/Rolls-Royce-logo-2048x2048.png");
+}
+#lamborghini {
+    background-image: url("../media/lamborghini-logo-1000x1100.png");
+}
+#tesla {
+    background-image: url("../media/tesla-logo.png");
+}
+#audi {
+    background-image: url("../media/Audi-logo-2009-1920x1080.png");
+    background-size: 40%;
+}
+#mitsubishi {
+    background-image: url("../media/Mitsubishi-logo-2000x2500.png");
+}
+#toyota {
+    background-image: url("../media/toyota-logo-2019-3700x1200.png");
+    background-size: 50%;
+}
+#peugeot {
+    background-image: url("../media/Peugeot-logo-2010-1920x1080.png");
+    background-size: 50%;
+}
 #widget-0 {
     position: fixed;
     right: 0;

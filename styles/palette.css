@@ -1,0 +1,20 @@
+/* Colors */
+
+.light-fg {
+    color: #ffffff;
+}
+.light-bg {
+    background-color: #ffffff;
+}
+.dark-fg {
+    color: #121212;
+}
+.dark-bg {
+    background-color: #121212;
+}
+.gray-fg {
+    color: #252525;
+}
+.gray-bg {
+    background-color: #252525;
+}
