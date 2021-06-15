@@ -20,7 +20,7 @@
 }
 html, body, main, section {
     width: 100vw;
-    font-family: 'Dosis', 'Varela', Arial, Helvetica, sans-serif;
+    font-family: 'Dosis', 'Varela', 'Orbitron', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
