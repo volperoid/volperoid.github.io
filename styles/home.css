@@ -21,6 +21,7 @@ header {
     justify-content: center;
     height: 100%;
     margin-right: 10%;
+    background-color: #121212cc;
 }
 #logo {
     display: grid;
@@ -88,6 +89,10 @@ header {
     flex-direction: column;
     margin-top: 48px;
     font-family: 'Varela';
+    color: #ffffff80;
+}
+#credits:hover #smallText, #credits:hover #largeText {
+    color: #ffffffbf;
 }
 #smallText {
     width: 100%;
@@ -103,6 +108,7 @@ header {
 }
 #largeText i {
     margin-right: 8px;
+    color: #6e5494;
 }
 #nav-arrow {
     display: flex;
@@ -299,8 +305,11 @@ h2 {
     height: 25vh;
     display: grid;
     grid-template-columns: repeat(15, 1fr);
+    gap: 0 2vw;
     background-color: #e6e6e6;
     padding: 0 2.5vw;
+    border-top: 4px solid crimson;
+    border-bottom: 4px solid crimson;
 }
 .brand {
     height: 100%;
@@ -309,11 +318,15 @@ h2 {
     background-repeat: no-repeat;
     background-size: 30%;
     transition: all 350ms ease-in-out;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
 }
 .brand:hover {
     background-color: #ffffff;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
     transform: scale(1.1);
+    border-top: 4px solid crimson;
+    border-bottom: 4px solid crimson;
 }
 #volkswagen {
     background-image: url("../media/Volkswagen-logo.png");

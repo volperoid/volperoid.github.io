@@ -40,11 +40,11 @@ function openSlide(target){
         document.querySelector(selectorString).style.opacity = 1;
         document.querySelector('#' + target.id + ' ' + '.ui-hint').style.visibility = 'hidden';
         closePrevSlide(target);
-    } else if (target.style.flex == '10 1 0%') {
+    } /*else if (target.style.flex == '10 1 0%') {
         target.style.flex = '1 1 0%';
         closeCurrentSlide(target);
         target.style.zIndex = 0;
-    }
+    }*/
     document.querySelectorAll('.slide').forEach(element => {
         if (element.id !== target.id) {
             element.style.zIndex = 0;
@@ -75,7 +75,7 @@ function removeFocusEffects(target) {
     document.querySelectorAll('.slide').forEach(element => {
     });
 }
-
+/*
 function activeTheme(theme) {
     if (theme == 'dark') {
         themeLabel = 'dark';
@@ -113,7 +113,6 @@ function activeTheme(theme) {
         return 'light';
     }
 }
-
 function slideIt (targetButton) {
     if (targetButton == 'light') {
         document.querySelector('#toggle').style.transform = 'translateY(0%)';
@@ -127,6 +126,7 @@ function slideIt (targetButton) {
         activeTheme('light');
     }
 }
+*/
 
 function scrollToHeading () {
 
@@ -148,6 +148,7 @@ document.querySelectorAll('.close-btn').forEach(element => {
         }
     });
 });
+/*
 document.querySelector('#light').addEventListener('click', () => {slideIt('light')});
 document.querySelector('#dark').addEventListener('click', () => {slideIt('dark')});
 document.querySelector('#nav-arrow a').addEventListener('click', scrollToHeading);
@@ -156,6 +157,7 @@ document.querySelector('#credits').addEventListener('mouseover', () => {
     document.querySelector('#largeText').style.color = '#crimson';
     document.querySelector('#largeText i').style.color = '#crimson';
 });
+*/
 document.querySelectorAll('.brand').forEach(element => {
     element.addEventListener('mousedown', () => {
         if (element.style.backgroundSize == '40%') {
@@ -175,4 +177,4 @@ document.querySelectorAll('.brand').forEach(element => {
 
 // * run at visit //
 
-activeTheme(themeLabel);
+/*activeTheme(themeLabel);*/
