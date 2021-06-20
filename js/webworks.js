@@ -63,13 +63,12 @@ function addFocusEffects(target) {
 }
 
 function removeFocusEffects(target) {
-    document.querySelector('#' + target.id + ' ' + '.ui-hint').style.visibility = 'hidden';
     if (target.style.flex !== '10 1 0%') {
         target.style.transform = 'scale(1)';
         target.style.boxShadow = 'none';
+        document.querySelector('#' + target.id + ' ' + '.ui-hint').style.visibility = 'hidden';
+        target.style.zIndex = 0;
     }
-    document.querySelectorAll('.slide').forEach(element => {
-    });
 }
 
 // * load event listeners //
@@ -78,20 +77,4 @@ document.querySelectorAll('.slide').forEach(element => {
     element.addEventListener('click', () => {openSlide(element)});
     element.addEventListener('mouseenter', () => {addFocusEffects(element)});
     element.addEventListener('mouseleave', () => {removeFocusEffects(element)});
-});
-document.querySelectorAll('.brand').forEach(element => {
-    element.addEventListener('mousedown', () => {
-        if (element.style.backgroundSize == '40%') {
-            element.style.backgroundSize = '35%';
-        } else if (element.style.backgroundSize == '50%') {
-            element.style.backgroundSize = '45%';
-        }
-    });
-    element.addEventListener('mouseup', () => {
-        if (element.style.backgroundSize == '35%') {
-            element.style.backgroundSize = '40%';
-        } else if (element.style.backgroundSize == '45%') {
-            element.style.backgroundSize = '50%';
-        }
-    });
 });
