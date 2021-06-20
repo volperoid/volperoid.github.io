@@ -233,6 +233,8 @@ h2 {
     width: 33.33%;
     height: 100%;
     opacity: 0;
+    background-color: #ffffff;
+    color: #121212;
     overflow-x: hidden;
     transition: all 1s;
     transform: translateX(-100%);
