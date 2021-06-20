@@ -167,6 +167,7 @@ h2 {
     border-left: 4px solid crimson;
 }
 #section-0 {
+    position: relative;
     display: flex;
     align-items: center;
     justify-items: center;
@@ -190,23 +191,23 @@ h2 {
 }
 #slide-0 {
     background-image: url("../media/car-18.jpg");
-    margin: -1px -1px -1px 0;
+    margin: 0 -1px 0 0;
 }
 #slide-1 {
     background-image: url("../media/continental.jpg");
-    margin: -1px -1px -1px -1px;
+    margin: 0 -1px 0 -1px;
 }
 #slide-2 {
     background-image: url("../media/performance.jpg");
-    margin: -1px -1px -1px -1px;
+    margin: 0 -1px 0 -1px;
 }
 #slide-3 {
     background-image: url("../media/oldtimer.jpg");
-    margin: -1px -1px -1px -1px;
+    margin: 0 -1px 0 -1px;
 }
 #slide-4 {
     background-image: url("../media/components.jpg");
-    margin: -1px 0 -1px -1px;
+    margin: 0 0 0 -1px;
 }
 .ui-hint {
     visibility: hidden;

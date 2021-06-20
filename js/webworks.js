@@ -4,10 +4,6 @@
 let logCount = 1;
 console.log('JavaScript Event Log:');
 
-// * global declarations //
-
-let themeLabel = 'dark';
-
 // * functions //
 
 function closePrevSlide (activeSlide) {
@@ -40,11 +36,11 @@ function openSlide(target){
         document.querySelector(selectorString).style.opacity = 1;
         document.querySelector('#' + target.id + ' ' + '.ui-hint').style.visibility = 'hidden';
         closePrevSlide(target);
-    } /*else if (target.style.flex == '10 1 0%') {
+    } else if (target.style.flex == '10 1 0%') {
         target.style.flex = '1 1 0%';
         closeCurrentSlide(target);
         target.style.zIndex = 0;
-    }*/
+    }
     document.querySelectorAll('.slide').forEach(element => {
         if (element.id !== target.id) {
             element.style.zIndex = 0;
@@ -75,62 +71,6 @@ function removeFocusEffects(target) {
     document.querySelectorAll('.slide').forEach(element => {
     });
 }
-/*
-function activeTheme(theme) {
-    if (theme == 'dark') {
-        themeLabel = 'dark';
-        document.querySelector('#banner').style.backgroundColor = '#121212cc';
-        document.querySelector('#logo').style.color = '#ffffff';
-        document.querySelector('#credits').style.color = '#ffffff80'
-        document.querySelector('#smallText').style.color = '#ffffff80';
-        document.querySelector('#largeText').style.color = '#ffffff80';
-        document.querySelectorAll('.description').forEach(element => {
-            element.style.backgroundColor = '#ffffff';
-            element.style.color = '#121212';
-        });
-        document.querySelectorAll('h2').forEach(element => {
-            element.style.color = '#ffffff';
-        });
-        document.querySelector('body').style.backgroundColor = '#121212';
-        document.querySelector('body').style.color = '#ffffff';
-        return 'dark';
-    } else if (theme == 'light') {
-        themeLabel = 'light';
-        document.querySelector('#banner').style.backgroundColor = '#ffffffcc';
-        document.querySelector('#logo').style.color = '#121212';
-        document.querySelector('#credits').style.color = '#121212'
-        document.querySelector('#smallText').style.color = '#12121280';
-        document.querySelector('#largeText').style.color = '#12121280';
-        document.querySelectorAll('.description').forEach(element => {
-            element.style.backgroundColor = '#121212';
-            element.style.color = '#ffffff';
-        });
-        document.querySelectorAll('h2').forEach(element => {
-            element.style.color = '#121212';
-        });
-        document.querySelector('body').style.backgroundColor = '#ffffff';
-        document.querySelector('body').style.color = '#121212';
-        return 'light';
-    }
-}
-function slideIt (targetButton) {
-    if (targetButton == 'light') {
-        document.querySelector('#toggle').style.transform = 'translateY(0%)';
-        console.log(logCount + ':' + ' ' + 'Dark Theme');
-        logCount++
-        activeTheme('dark');
-    } else if (targetButton == 'dark') {
-        document.querySelector('#toggle').style.transform = 'translateY(-50%)';
-        console.log(logCount + ':' + ' ' + 'Light Theme');
-        logCount++
-        activeTheme('light');
-    }
-}
-*/
-
-function scrollToHeading () {
-
-}
 
 // * load event listeners //
 
@@ -139,25 +79,6 @@ document.querySelectorAll('.slide').forEach(element => {
     element.addEventListener('mouseenter', () => {addFocusEffects(element)});
     element.addEventListener('mouseleave', () => {removeFocusEffects(element)});
 });
-document.querySelectorAll('.close-btn').forEach(element => {
-    element.addEventListener('click', () => {
-        if (target.style.flex == '10 1 0%') {
-            target.style.flex = '1 1 0%';
-            closeCurrentSlide(target);
-            target.style.zIndex = 0;
-        }
-    });
-});
-/*
-document.querySelector('#light').addEventListener('click', () => {slideIt('light')});
-document.querySelector('#dark').addEventListener('click', () => {slideIt('dark')});
-document.querySelector('#nav-arrow a').addEventListener('click', scrollToHeading);
-document.querySelector('#credits').addEventListener('mouseover', () => {
-    document.querySelector('#smallText').style.color = '#crimson';
-    document.querySelector('#largeText').style.color = '#crimson';
-    document.querySelector('#largeText i').style.color = '#crimson';
-});
-*/
 document.querySelectorAll('.brand').forEach(element => {
     element.addEventListener('mousedown', () => {
         if (element.style.backgroundSize == '40%') {
@@ -174,7 +95,3 @@ document.querySelectorAll('.brand').forEach(element => {
         }
     });
 });
-
-// * run at visit //
-
-/*activeTheme(themeLabel);*/
