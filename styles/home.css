@@ -287,36 +287,24 @@ h2 {
     height: 30vh;
 }
 #section-1 {
+    width: 100vw;
+    height: 30vh;;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    background-image: url("../media/car-15.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-#scrollFrame {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 25vw;
-    margin-left: 10%;
-    overflow-x: visible;
-    overflow-y: scroll;
+    overflow-x: scroll;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
 #brands {
-    height: 400vh;
-    width: 20vw;
+    height: 25vh;
     display: grid;
-    grid-template-rows: repeat(15, 1fr);
-    gap: 5vh;
+    grid-template-columns: repeat(15, 1fr);
     background-color: #e6e6e6;
+    padding: 0 2.5vw;
 }
 .brand {
+    height: 100%;
+    width: 22.5vw;
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30%;

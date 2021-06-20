@@ -139,6 +139,15 @@ document.querySelectorAll('.slide').forEach(element => {
     element.addEventListener('mouseenter', () => {addFocusEffects(element)});
     element.addEventListener('mouseleave', () => {removeFocusEffects(element)});
 });
+document.querySelectorAll('.close-btn').forEach(element => {
+    element.addEventListener('click', () => {
+        if (target.style.flex == '10 1 0%') {
+            target.style.flex = '1 1 0%';
+            closeCurrentSlide(target);
+            target.style.zIndex = 0;
+        }
+    });
+});
 document.querySelector('#light').addEventListener('click', () => {slideIt('light')});
 document.querySelector('#dark').addEventListener('click', () => {slideIt('dark')});
 document.querySelector('#nav-arrow a').addEventListener('click', scrollToHeading);

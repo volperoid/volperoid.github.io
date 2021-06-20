@@ -23,6 +23,7 @@ html, body, main, section {
     font-family: 'Dosis', 'Varela', 'Orbitron', Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
     scrollbar-width: none;
+    overflow-x: clip;
 }
 ::-webkit-scrollbar {
     display: none;
