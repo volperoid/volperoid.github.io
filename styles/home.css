@@ -146,15 +146,13 @@ header {
     }
 }
 .heading {
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     width: 100%;
     padding: 24px 48px;
-}
-#heading-0 {
-    height: 30vh;
 }
 h2 {
     display: flex;
@@ -292,9 +290,6 @@ h2 {
 .close-btn:hover {
     color: crimson;
 }
-#heading-1 {
-    height: 30vh;
-}
 #section-1 {
     position: relative;
     width: 100vw;
@@ -404,71 +399,34 @@ h2 {
     background-image: url("../media/Peugeot-logo-2010-1920x1080.png");
     background-size: 50%;
 }
-/*
-#widget-0 {
-    position: fixed;
-    right: 0;
-    bottom: 1vh;
-    z-index: 9;
-    transform: translateX(50%);
-    transition: all 350ms ease-in-out;
-    display: flex;
+#heading-2, #heading-3 {
+    background-color: #ffffff;
+    color: #121212;
+}
+footer {
+    width: 100%;
+    height: 33.33vh;
+    display: grid;
+    grid-template-columns: 1fr min-content 1fr min-content 1fr;
     align-items: center;
-    justify-items: center;
-    height: 60px;
-    background-color: hsla(0, 0%, 7%, 0.77);
-    overflow: clip;
-
-    Variant A
-
-    border-radius: 56px 28px 28px 56px;
-
-    Variant B
-
-    border-radius: 56px 0 0 56px;
+    justify-content: center;
+    background-color: #121212;
+    color: crimson;
 }
-#widget-0:hover {
-    transform: translateX(0);
-}
-*/
-#toggle {
-    position: relative;
-    top: 50%;
+.separator {
+    height: 80%;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    gap: 16px;
     align-items: center;
-    justify-items: center;
-    border-radius: 28px;
-    padding: 8px;
-    transition: all 350ms ease-in-out;
+    justify-content: center;
 }
-#arrow {
-    color: crimson;
-    font-size: 96px;
-    border-radius: 100%;
-    transition: all 350ms ease-in-out;
+.top {
+    width: 4px;
+    height: 100%;
+    background-image: linear-gradient(to top, crimson 70%, transparent);
 }
-#widget-0:hover #arrow {
-    transform: rotateZ(180deg);
-}
-#light, #dark {
-    background: #242424;
-    border-radius: 100%;
-    padding: 8px;
-}
-#light:hover, #dark:hover {
-    background-color: #484848;
-}
-#light {
-    color: lightgoldenrodyellow;
-}
-#dark {
-    color: lightskyblue;
-}
-.icon {
-    font-size: 28px;
-    text-align: center;
-    vertical-align: middle;
-
+.bottom {
+    width: 4px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, crimson 70%, transparent);
 }
