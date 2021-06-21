@@ -296,13 +296,38 @@ h2 {
     height: 30vh;
 }
 #section-1 {
+    position: relative;
     width: 100vw;
-    height: 30vh;;
+    height: 30vh;
+    background-color: #ffffff20;
     display: flex;
     align-items: center;
-    overflow-x: scroll;
+    justify-content: flex-start;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
+}
+#section-1 i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25vh;
+    padding: 0 1vw;
+    font-size: 48px;
+    color: #121212bf;
+    filter: drop-shadow(0 0 10px #121212bf);
+    z-index: 9;
+}
+#section-1 i:hover {
+    color: #121212;
+}
+#section-1 .fa-angle-left {
+    position: absolute;
+    left: 0;
+}
+#section-1 .fa-angle-right {
+    position: absolute;
+    right: 0;
 }
 #brands {
     height: 25vh;
@@ -311,8 +336,6 @@ h2 {
     gap: 0 2vw;
     background-color: #e6e6e6;
     padding: 0 2.5vw;
-    border-top: 4px solid crimson;
-    border-bottom: 4px solid crimson;
 }
 .brand {
     height: 100%;
@@ -321,15 +344,11 @@ h2 {
     background-repeat: no-repeat;
     background-size: 30%;
     transition: all 350ms ease-in-out;
-    border-top: 4px solid transparent;
-    border-bottom: 4px solid transparent;
 }
 .brand:hover {
     background-color: #ffffff;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.20);
     transform: scale(1.1);
-    border-top: 4px solid crimson;
-    border-bottom: 4px solid crimson;
 }
 #volkswagen {
     background-image: url("../media/Volkswagen-logo.png");
@@ -385,6 +404,7 @@ h2 {
     background-image: url("../media/Peugeot-logo-2010-1920x1080.png");
     background-size: 50%;
 }
+/*
 #widget-0 {
     position: fixed;
     right: 0;
@@ -399,17 +419,18 @@ h2 {
     background-color: hsla(0, 0%, 7%, 0.77);
     overflow: clip;
 
-    /** Variant A
+    Variant A
 
-    border-radius: 56px 28px 28px 56px;*/
+    border-radius: 56px 28px 28px 56px;
 
-    /** Variant B */
+    Variant B
 
     border-radius: 56px 0 0 56px;
 }
 #widget-0:hover {
     transform: translateX(0);
 }
+*/
 #toggle {
     position: relative;
     top: 50%;
