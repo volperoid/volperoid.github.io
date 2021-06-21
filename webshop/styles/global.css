@@ -1,0 +1,35 @@
+
+/** CSS Reset */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    cursor: default;
+}
+
+/** Icons */
+
+.material-icons, .material-icons-outlined, .material-icons-two-tone, .material-icons-round, .material-icons-sharp {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/** Common Styling */
+
+html, body {
+    min-width: 100vw;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/** Color Classes */
+
+.font-light {
+    color: #ffffff;
+}
+.font-dark {
+    color: #000000;
+}
